@@ -1,0 +1,128 @@
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="breadcum_list1">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+	<li class="breadcrumb-item">Home</li>
+	<li class="breadcrumb-item"><a target="_blank" href="{% url 'reports:reportpage' report.slug %}">{{report.meta_title | title}}</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Buy Now</li>
+</ol>
+</nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+                    <div class="card mt-4">
+                         <div class="card-header">
+                          <h5>Billing Details</h5>
+                         </div>
+                        <div class="card-body">
+
+                        <form>
+                            {% csrf_token %}
+                            {{ form.first_name}}
+                            {{ form.last_name}}
+                            {{ form.corporate_email}}
+                            {{ form.phone}}
+                            {{ form.company}}
+                            {{ form.job_title}}
+                            {{ form.address}}
+                            {{ form.city}}
+                            {{ form.state}}
+                            {{form.country}}
+                            {{ form.zipcode}}
+
+                            <div class="form-group row mx-1">
+                                    <input type="text"  placeholder="Enter Captcha Code" class="form-control col-6" >
+
+                                <p id="captcha" class="col-4" ><strong></strong></p>
+                                      <img src="{% static 'images/reload.png' %}" id="reloadId" height="60px" width="60px" class="col-2 float-right" >
+
+                          </div>
+
+                        </form>
+                            </div>
+        </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5>Shopping Cart Details</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th>Report</th>
+                            <td>{{report.title}}</td>
+                        </tr>
+                        <tr>
+                            <th>Report ID</th>
+                            <td>{{report.id}}</td>
+                        </tr>
+                         <tr>
+                            <th>Price</th>
+                            <td>$ {{price}}</td>
+                        </tr>
+                         <tr>
+                            <th>Total</th>
+                            <td>$ {{price}}</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5>Payment Details</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th><a href="#"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-large.png" alt="Buy now with PayPal" /></a></th>
+
+                        </tr>
+<!--                        <tr>-->
+<!--                            <th><a href="#" class="btn btn-primary btn-block"><strong>CC Avenue</strong></a></th>-->
+
+<!--                        </tr>-->
+<!--                         <tr>-->
+<!--                             <th><a href="#" class="btn btn-primary btn-block"><strong>Debit/Credit Card</strong></a></th>-->
+
+<!--                        </tr>-->
+
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+</div>
+</div>
+
+<script>
+
+        captchaNumber = Math.floor(Math.random() * 10000)
+        var captcha = document.getElementById('captcha')
+         captcha.innerHTML = "<strong>" + captchaNumber + '</strong>'
+
+    imgId = document.getElementById('reloadId')
+    imgId.addEventListener('click', function(){
+        captchaNumber = Math.floor(Math.random() * 10000)
+
+        var captcha = document.getElementById('captcha')
+        captcha.innerHTML = "<strong>" + captchaNumber + '</strong>'
+
+
+    })
+
+
+
+</script>
+{% endblock %}

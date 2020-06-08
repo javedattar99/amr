@@ -1,0 +1,448 @@
+
+
+
+
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block body %}
+
+
+<style>#top-header{margin:0 0 10px 0}.header-fixed{position:fixed;width:100%;background-color:#f1f1f1;top:0;z-index:999;box-shadow:0 0 20px 0 #ddd}</style><div id="body-container">
+<div class="row">
+<div class="col-lg-8 col-12 reportdet">
+<div class="breadcum_list">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="#">Home</a></li>
+<li class="breadcrumb-item"><a href="#">{{report.category.name}}</a></li>
+<li class="breadcrumb-item active" aria-current="page">{{report.title | title }}</li>
+</ol>
+</nav>
+</div>
+<div class="media_box mb-2">
+<div class="media ">
+<img src="#" alt="Medical Devices industry" title="Medical Devices industry" class="align-self-start mr-4 d-none d-sm-block img-responsive">
+<div class="media-body">
+  <h1 class="rd-page-title">
+	{{report.title}}	</h1>
+	<ul class="list-inline rd-cat">
+	<li class="list-inline-item"><b>Report Id</b> : {{report.id}}</li>
+	<li class="list-inline-item"><b>Pages</b> : {{report.no_of_pages}}</li>	<li class="list-inline-item"><b>Date</b> : May, 2020</li>
+	<li class="list-inline-item"><b>Category</b> : <a href="#">{{report.category.name | capfirst }}</a></li>
+		<li><span><b>Publisher</b> : {{report.publisher.name}}</span></li>
+	</ul>
+	<div id="calltoac">
+       <a href="{% url 'reports:samplerequest' report.id%}"><button class="btncut"><span><i class="icon-download-alt"></i> &nbsp; Download Sample</span></button></a>
+	<a href=""><button class="btncut"><span><i class="icon-tags"></i> &nbsp; Request Discount</span></button> </a>
+	<a href=""><b><button class="btncut"><span><i class="icon-file-text"></i> &nbsp; Inquire Before Buy</span></button> </b> </a>
+
+	</div>
+</div>
+</div>
+</div>
+
+
+<div class="clearfix">&nbsp;</div>
+<ul class="nav nav-pills rep-det-tabs" id="pills-tab" role="tablist">
+<li class="nav-item">
+	<a class="nav-link active" id="rep-overview-tab" data-toggle="pill" href="#rep-overview" role="tab" aria-controls="rep-overview" aria-selected="true">Report Summary</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link" id="rep-toc-tab" data-toggle="pill" href="#rep-toc" role="tab" aria-controls="rep-toc" aria-selected="false">Table of Content</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link" id="rel-rep-tab" data-toggle="pill" href="#rel-rep" role="tab" aria-controls="rel-rep" aria-selected="false">Related Reports</a>
+</li>
+
+
+</ul>
+<div class="tab-content rep-rd-content tab-wrapper" id="pills-tabContent">
+<div class="tab-pane fade active show" id="rep-overview" role="tabpanel" aria-labelledby="rep-overview-tab">
+
+<p>{{report.summary | safe}}</p>
+
+</div>
+<div class="tab-pane fade" id="rep-toc" role="tabpanel" aria-labelledby="rep-toc-tab">
+	{{report.tabel_of_content | safe}}</div>
+<div class="tab-pane fade" id="rel-rep" role="tabpanel" aria-labelledby="rel-rep-tab"> 
+<div class="row">
+ <div class="col-lg-12">
+ <article class="post reportsList">
+ 	 <div class="panel panel-default">
+	  <div class="panel-body">
+	  <div class="row">
+	  <div class="col-lg-3 col-sm-3">
+	  <div class="reportsImg">
+	  <a href="#"> <img src="#" alt="Medical Devices" title="Medical Devices" class="img-post img-responsive"></a>
+	 </div>
+	</div>
+	<div class="col-lg-9 col-sm-9 post-content">
+		<h3 class="post-title reportsTitle">
+		<a href="#" class="transicion">Cell Culture Market 2020 By Manufacturers, Regions, Types, Applications And Forecast To 2026</a>
+		</h3>
+		<div class="reportsContent">
+		<table class="table table-bordered">
+		<tbody><tr>
+		   <td> <i class="fa fa-user"></i> &nbsp; Price : US $3000</td>
+		    
+		   <td><i class="fa fa-calendar"></i> &nbsp; Date : May 2020</td>
+		</tr>
+		<tr>
+		<td><i class="fa fa-user"></i> &nbsp; Category : <a href="#"> Medical Devices</a></td>
+		<td><i class="fa fa-file"></i> &nbsp;  Pages : 115</td>
+		</tr>
+		</tbody></table>
+		 <a class="btn btn-primary vert btn btn-primary" href="#">View Details
+		</a>
+		</div>
+			
+	   </div>
+	  </div>
+	 </div>
+	</div>
+
+	</article>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix">&nbsp;</div>
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12 mt-5">
+          <div class="card">
+                  <div class="card-header">
+                      <strong>Choose License Type</strong>
+                  </div>
+                  <div class="card-body">
+                      <form method="post" action="{% url 'reports:checkout' report.id %}">
+                          {% csrf_token %}
+                      <p class="card-text"><input type="radio" name="price" checked="checked" value="{{report.single_user_price}}"> Single User Licence   <strong>${{report.single_user_price}}</strong></p>
+                    <p class="card-text"><input type="radio" name="price" value="{{report.multi_user_price}}"> Multi User Licence <strong>${{report.multi_user_price}}</strong></p>
+                      <p class="card-text"><input type="radio" name="price" value="{{report.corporate_user_price}}"> Corporate User Licence <strong>${{report.corporate_user_price}}</strong></p>
+                      <button type="submit" class="btn btn-primary btn-block"><strong>Buy Now</strong></button>
+                      </form>
+                  </div>
+          </div>
+     </div>
+</div>
+</div>
+<div class="FAQsect">
+<div class="inner-wrapper">
+<div class="container-fluid">
+	<div class="accordion-option">
+	<h3 class="title">Frequently Asked Questions</h3>
+	<a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group FAQaccordion" id="accordion" role="tablist" aria-multiselectable="true">
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          What is the scope of the report?
+        </a>
+      </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in collapse show" role="tabpanel" data-parent="#accordion" aria-labelledby="headingOne">
+        <div class="panel-body">
+          The report efficiently evaluates the market from various dimensions to deliver an end-product that is informative, elaborate, and accurate and includes <b> detailed market segmentation, regional analysis, and competitive landscape of the industry.</b>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         Does this report estimates the current market size?
+        </a>
+      </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" data-parent="#accordion" aria-labelledby="headingTwo">
+        <div class="panel-body">
+          The report efficiently evaluates the current market size and provides industry forecast. The market was valued at xx Million US$ in 2019, and is expected to grow at a CAGR of xx% during the period 2020-2027.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Does the report provides Market Size in terms of – Value (US$ Mn) and Volume (thousand ton / metric ton / cubic meter) - of the market?
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" data-parent="#accordion" aria-labelledby="headingThree">
+        <div class="panel-body">
+          The report efficiently evaluates the current market size and provides forecast for the industry in terms of <b> Value (US$ Mn) and Volume (thousand ton / metric ton / cubic meter). </b>
+        </div>
+     </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			Which segments covered in this report?
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" data-parent="#accordion" aria-labelledby="headingThree">
+        <div class="panel-body">
+          Market is segmented by Types, Applications, Technology, End-use Industries, and Regions. 
+        </div>
+     </div>
+    </div>
+	
+   <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			What are the key factors covered in this report?
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" data-parent="#accordion" aria-labelledby="headingThree">
+        <div class="panel-body">
+         The report presents the <b> current market size, and market forecast, market opportunities, key drivers and restraints, regulatory scenario, industry trend, PESTLE analysis, PORTER’s analysis, new product approvals/launch, promotion and marketing initiatives, pricing analysis, export-import analysis, trade analysis, competitive landscape </b> which help businesses in decision making. The analysis data is based on current and historical market trends which help in investment related decisions.  
+        </div>
+     </div>
+    </div>
+	
+	<div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			Does this report offer customization?
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" data-parent="#accordion" aria-labelledby="headingThree">
+        <div class="panel-body">
+          Custom research is crucial components of the business strategy which helps any organization to gain insight into specific business sector, aligned with specific area of interest. Thus, SMI offers more accurate, pragmatic, and actionable information specifically tailored to suit your business needs. 
+        </div>
+     </div>
+    </div>
+<script data-cfasync="false" src="https://www.stratagemmarketinsights.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+                  {
+    "@type": "Question",
+    "name": "What is the scope of this report?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The report efficiently evaluates the market from various dimensions to deliver an end-product that is informative, elaborate, and accurate and includes detailed market segmentation, regional analysis, and competitive landscape of the industry.<a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
+    }
+  } ,              {
+    "@type": "Question",
+    "name": "Does this report estimates the current market size?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The report efficiently evaluates the current market size and provides industry forecast. The market was valued at xx Million US$ in 2019, and is expected to grow at a CAGR of xx% during the period 2020-2027.  <a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
+    }
+  } ,              {
+    "@type": "Question",
+    "name": "Does the report provides Market Size in terms of – Value (US$ Mn) and Volume (thousand ton / metric ton / cubic meter) - of the market?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The report efficiently evaluates the current market size and provides forecast for the industry in terms of Value (US$ Mn) and Volume (thousand ton / metric ton / cubic meter).<a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
+    }
+  },{
+    "@type": "Question",
+    "name": "Which segments covered in this report?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Market is segmented by Product Types, Applications, Technology, End-use Industries, Distribution channel, and Regions.<a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
+    }
+  },{
+    "@type": "Question",
+    "name": "What are the key factors covered in this report?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The report presents the current market size, and market forecast, market opportunities, key drivers and restraints, regulatory scenario, industry trend, PESTLE analysis, PORTER’s analysis, new product approvals/launch, promotion and marketing initiatives, pricing analysis, export-import analysis, trade analysis, competitive landscape which help businesses in decision making. The analysis data is based on current and historical market trends which help in investment related decisions. <a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
+    }
+  },{
+    "@type": "Question",
+    "name": "Does this report offer customization?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Custom research is crucial components of the business strategy which helps any organization to gain insight into specific business sector, aligned with specific area of interest. Thus, SMI offers more accurate, pragmatic, and actionable information specifically tailored to suit your business needs.<a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
+    }
+  }]
+}
+</script>
+  </div>
+</div>   
+</div>
+<!--</div><div id="testimonials" class="testimonials-bg">-->
+<!--<div class="container">-->
+<!--<div class="text-center mb-5">-->
+<!--<h1 class="head-after head-after-w">Testimonials</h1>-->
+<!--</div>-->
+<!--<div class="t-row">		-->
+<!--<div id="t-carousel" class="owl-carousel">						-->
+<!--<div class="item card">-->
+<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--	<div class="row">-->
+<!--		<div class="col-lg-3">-->
+<!--			<div class="titem-img">-->
+<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="col-lg-9 text-justify">-->
+<!--			<h5>John</h5>-->
+<!--			<p>Stratagem Market Insights was the place for someone like me who is always in search of the best market reports. The reports are well collated and have in-depth information. </p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--</div>-->
+<!--<div class="item card">-->
+<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--	<div class="row">-->
+<!--		<div class="col-lg-3">-->
+<!--			<div class="titem-img">-->
+<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/women.png" alt=""/>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="col-lg-9 text-justify">-->
+<!--			<h5>Eliyana</h5>-->
+<!--			<p>It is fantastic to find a bunch of people working hard in the background to ensure that we have a fair and clear idea of a market and be worry-free to invest in the same. </p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--</div>-->
+<!--<div class="item card">-->
+<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--	<div class="row">-->
+<!--		<div class="col-lg-3">-->
+<!--			<div class="titem-img">-->
+<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="col-lg-9 text-justify">-->
+<!--			<h5>David</h5>-->
+<!--			<p>The dedication of the team toward providing in-depth research on several markets is worth mentioning. I got 24-hr service, which is worth mentioning. This helped me in clearing my quarries. </p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--</div>-->
+<!--<div class="item card">-->
+<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--	<div class="row">-->
+<!--		<div class="col-lg-3">-->
+<!--			<div class="titem-img">-->
+<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="col-lg-9 text-justify">-->
+<!--			<h5>Nik</h5>-->
+<!--			<p>All the efforts Stratagem Market Insights put in the background helped us in an effective campaign. Our association with Stratagem Market Insights has been seamless. </p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--</div>-->
+<!--<div class="item card">-->
+<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--	<div class="row">-->
+<!--		<div class="col-lg-3">-->
+<!--			<div class="titem-img">-->
+<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/women.png" alt="women"/>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="col-lg-9 text-justify">-->
+<!--			<h5>Maria</h5>-->
+<!--			<p>I was impressed by the time-bound deliveries of report and an efficient after-sale response team that handles various quarries and complaints with ease. </p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--</div>-->
+<!--<div class="item card">-->
+<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--	<div class="row">-->
+<!--		<div class="col-lg-3">-->
+<!--			<div class="titem-img">-->
+<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="col-lg-9 text-justify">-->
+<!--			<h5>Ethan</h5>-->
+<!--			<p>We are satisfied with the quality of the content. The report was good and in depth, yet affordable and is helping us to build our strategy for the mid to long term in our businesses. </p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--</div>-->
+<!--<div class="item card">-->
+<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--	<div class="row">-->
+<!--		<div class="col-lg-3">-->
+<!--			<div class="titem-img">-->
+<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="col-lg-9 text-justify">-->
+<!--			<h5>Gari</h5>-->
+<!--			<p>Stratagem Market Insights did excellent market research for my company. This was my first experience with the firm and I was pretty pleased with their efforts. </p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<script type="application/ld+json">
+{
+"@context" : "http://schema.org",
+"@type" : "WebSite",
+"name" : "Stratagem Market Insights",
+"alternateName" : "SMI",
+"url" : "https://www.stratagemmarketinsights.com"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+  "@type": "ListItem",
+  "position":1,
+  "item": {"@id": "https://www.stratagemmarketinsights.com/",
+  "name": "Home",
+  "image": "https://www.stratagemmarketinsights.com/images/logo.png"
+  }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://www.stratagemmarketinsights.com/category/medical-devices-industries",
+      "name": "Category"
+      }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3",
+      "name": "3D Cell Culture Market 2020 By Manufacturers, Regions, Types, Applications And Forecast To 2026"
+    }
+  }]
+}
+</script>			
+<!--<div id="get-services" class="get-services-bg">-->
+<!--	<div class="container">-->
+<!--		<div class="row d-flex align-items-center">-->
+<!--			<div class="col-lg-10">-->
+<!--				<h4 class="mb-2">Get In Touch</h4>-->
+<!--				<p class="mb-0">In search of customized market research solution? We are here to help you. Contact us.</p>-->
+<!--			</div>-->
+<!--			<div class="col-lg-2">-->
+<!--				<a class="btn btn-white btn-block" href="https://www.stratagemmarketinsights.com/contact-us">Contact us <i class="icon-long-arrow-right"></i></a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+
+
+{% endblock %}

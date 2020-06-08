@@ -1,0 +1,66 @@
+
+
+{% extends 'base.html'%}
+{% block body %}
+<body>
+
+<div class="container">
+<div class="breadcum_list1">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+	<li class="breadcrumb-item">Home</li>
+	<li class="breadcrumb-item"><a target="_blank" href="#">{{report.meta_title | title}}</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Request Sample</li>
+</ol>
+</nav>
+</div>
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-6">
+			<div class="card">
+					  <div class="card-header">
+						 <h5>{{report.title | title}}</h5>
+					  </div>
+					  <div class="card-body">
+						<form method="post">
+						{% csrf_token %}
+						{{form.full_name}}
+						{{form.corporate_email}}
+						{{ form.country }}
+						{{ form.phone }}
+						{{ form.job_title }}
+						{{ form.company }}
+						{{ form.comment }}
+						<button type='submit' class='btn btn-primary'><strong>Send Request</strong></button>
+<!--							<button type="submit" class="btn btn-primary">Go somewhere</button>-->
+
+					 </form>
+
+					  </div>
+					</div>
+        </div>
+        <div class="col-6">
+             <div class="card">
+                <div class="container">
+                    <h4 align="center">DIRECT PURCHASE</h4>
+                    <h6>Report Id: {{ report.id}}</h6>
+                    <h6>Published Date: {{ report.published_date}}</h6>
+                     <h6>No. of Pages: {{ report.no_of_pages}}</h6>
+                    <hr>
+                     <p class="card-text"><input type="radio" name="price" checked="checked"> Single User Licence: ${{report.single_user_price}}</p>
+                      <p class="card-text"><input type="radio" name="price"> Multi User Licence: ${{report.multi_user_price}}</p>
+                    <p class="card-text"><input type="radio" name="price"> Corporate User Licence: ${{report.corporate_user_price}}</p>
+                     <a href="{% url 'reports:checkout' report.id %}" class="btn btn-primary btn-lg"><strong>Buy Now</strong></a>
+                        <hr>
+                    <h5 align="center">TESTIMONIALS</h5>
+                    <p>The insights included in the report were valuable and easy to digest. Having these reports, impacted our business significantly. Macro as well as supply chain details were included, besides market pricing.</p>
+
+                    <h6>- Senior Manager Commodity Development /Strategic Sourcing, Walmart</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}

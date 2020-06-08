@@ -1,0 +1,300 @@
+
+
+{% load static %}
+<html lang="en">
+<head>
+<title>Affulence Market Reports | Industry Analysis and Research Reports</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="canonical" href="index.html"/>
+<meta name="description" content="Affulence Market Reports offers detailed business research reports with in-depth strategic insights on varied industry verticals to meet all your business need."><meta name="keywords" content="Affulence Market Reports, SMI, Research and Consulting, Business Research, Market Research reports, business consulting services, Competitive Analysis, Industry Analysis, Market Intelligence, top market research companies"><meta name="document-type" content="Public"/>
+<meta name="Page-Topic" content="Market Research Reports"/>
+<meta name="copyright" content="Affulence Market Reports"/>
+<meta name="classification" content="market research reports"/>
+<meta name="document-classification" content="Market Research Reports Services"/>
+<meta name="distribution" content="global"/>
+<meta name="coverage" content="global"/>
+<meta name="abstract" content="market research reports, consulting services, industry analysis and reports"/>
+
+<meta name="Audience" content="All, Business, Management, Research, Services"/>
+<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/css/colors/default-color.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/css/theme-responsive.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/css/animation.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/css/owl.carousel.min.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/css/owl.transitions.css' %}" rel="stylesheet"/>
+<link href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="{% static 'assets/css/media.css' %}" rel="stylesheet"/>
+<meta property="og:url" content="index.html"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Affulence Market Reports | Industry Analysis and Research Reports"/>
+<meta property="og:description" content="Affulence Market Reports offers detailed business research reports with in-depth strategic insights on varied industry verticals to meet all your business need."/>
+<meta property="og:image" content="images/logos.png"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149866794-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-149866794-1');</script>
+</head>
+<body>
+
+<div id="top-header">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-8 text-left pad10">
+			<ul class="t-head-left">
+				<li><i class="icon-phone"></i><a id="telno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
+				<li><i class="icon-envelope"></i> <a  style="border-right:none;">&nbsp;<span class="__cf_email__">sales@affuelencemarketreports.com</span></a></li>
+			</ul>
+		</div>
+		<div class="col-lg-4 col-4 text-right">
+			<ul class="t-head-right">
+				<li class="nav-item">
+					<a class="btn btn-primary contNBtn" href="contact-us.html">Reach Us<i class="icon-phone"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<div id="header">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg">
+			<a class="navbar-brand" href="index.html"><img src="{% static 'images/amr-logo.jpg' %}" class="smi_logo" alt="Affulence Market Reports" title="Affulence Market Reports" height="80px"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html" class="menu-top-active">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about-us.html">About Us</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+							<ul class="dropdown-menu multi-column columns-2">
+								<div class="row">
+
+											{% for category in categories1 %}
+											<div class="col-sm-6">
+												<ul class="multi-column-dropdown">
+
+													<li><a class="dropdown-item" href="{% url 'category' category.slug %}">{{category.name | title }}</a></li>
+
+
+												</ul>
+											</div>
+											{% endfor %}
+
+
+									{% for category in categories2 %}
+									<div class="col-sm-6">
+										<ul class="multi-column-dropdown">
+											<li><a class="dropdown-item" href="{% url 'category' category.slug %}">{{category.name | title }}</a></li>
+
+										</ul>
+									</div>
+									{% endfor %}
+								</div>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publishers</a>
+							<ul class="dropdown-menu multi-column columns-2">
+								<div class="row">
+									{% for publisher in publishers1 %}
+									<div class="col-sm-6">
+										<ul class="multi-column-dropdown">
+
+											<li><a class="dropdown-item" href="{% url 'publisher' publisher.slug %}">{{publisher.name | title }}</a></li>
+
+
+										</ul>
+
+									</div>
+									{% endfor %}
+
+									{% for publisher in publishers2 %}
+									<div class="col-sm-6">
+										<ul class="multi-column-dropdown">
+											<li><a class="dropdown-item" href="{% url 'publisher' publisher.slug %}">{{publisher.name | title }}</a></li>
+										</ul>
+									</div>
+									{% endfor %}
+								</div>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+								<div class="dropdown-menu animate slideIn" data-animations="fadeInDown">
+									<a class="dropdown-item" href="service/industry-analysis.html">Industry Analysis Services</a>
+									<a class="dropdown-item" href="service/business-consulting.html">Business Consulting Services</a>
+									<a class="dropdown-item" href="service/market-intelligence.html">Market Intelligence Services</a>
+									<a class="dropdown-item" href="service/customized-research.html">Customized Research Services</a>
+									<a class="dropdown-item" href="service/long-term-engagement-model.html">Long Term Engagement Model Services</a>
+									<a class="dropdown-item" href="service/country-specific-analysis.html">Country Specific Analysis Services</a>
+								</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="news.html">Contact Us</a>
+						</li>
+
+						<li class="nav-item search_btn">
+							<a class="nav-link Navsearch_btn"><i class="icon-search srchBtn"></i> <i class="fa fa-times srchcloseBtn" style="display: none;"></i> </a>
+						</li>
+					</ul>
+				</div>
+		</nav>
+	</div>
+	<div class="searchBox_sect" id="fordesktop_searchBox" style="display: none;">
+<div class="container">
+	<div class="searchBox_inner">
+		<div class="card-d">
+			<form action="#" method="get">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<input type="text" class="form-control" placeholder="Search Your Industry Reports" name="key" onkeyup="lookup(this.value)">
+						<button type="submit" class="btn btn-primary "><i class="icon-search"></i></button>
+					</div>
+					<div class="typrch autobox"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="searchBox_sect" id="formob_searchBox">
+<div class="container">
+	<div class="searchBox_inner">
+		<div class="card-d">
+			<form action="" method="get">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<input type="text" class="form-control" placeholder="Search..." name="key" onkeyup="lookup(this.value)">
+						<button type="submit" class="btn btn-primary "><i class="icon-search"></i></button>
+					</div>
+					<div class="typrch autobox"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+
+{% block body %}
+
+
+
+{% endblock %}
+
+<div id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 mb-3">
+				<a class="navbar-brand" href="index.html"><img src="{% static 'images/amr-logo.jpg' %}" style="width: 170px;" alt="Affulence Market Reports" title="Affulence Market Reports"></a>
+				<div class="mt-3">
+					<p>Affulence Market Reports is a management consulting organization providing market intelligence and consulting services worldwide. We bring the expertise of consultants with an cumulative industry experience of more than 70 years. <a href="about-us.html">Read More </a></p>
+					<ul class="f-m-icons">
+						<li><a href="#" rel="nofollow"><i class="icon-facebook"></i></a></li>
+						<li><a href="#" rel="nofollow"><i class="icon-twitter"></i></a></li>
+						<li><a href="#" rel="nofollow"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-2 mb-3">
+				<h3 class="head-after">Menu</h3>
+				  <div class="mt-2">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="latest-market-research-reports.html">Latest Reports</a></li>
+						<li><a href="news.html">News</a></li>
+						<li><a href="contact-us.html">Contact Us</a></li>
+						 <li><a href="about-us.html">About Us</a></li>
+					</ul>
+				  </div>
+			</div>
+			<div class="col-lg-2 mb-3">
+				<h3 class="head-after">Quick Links</h3>
+				<div class="mt-2">
+					<ul>
+						<li><a href="privacy-policy.html" rel="nofollow">Privacy Policy</a></li>
+						<li><a href="disclaimer.html" rel="nofollow">Disclaimer</a></li>
+						<li><a href="terms-and-conditions.html" rel="nofollow">Terms and Conditions</a></li>
+						<li><a href="return-policy.html" rel="nofollow">Return Policy</a></li>
+						<li><a href="how-to-order.html" rel="nofollow">How to order</a></li>
+						<li><a href="format-and-delivery.html" rel="nofollow">Format and Delivery</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mb-3 text-left">
+				<h3 class="head-after">Get In Touch</h3>
+				<div class="mt-3 footer-contact">
+					<h5><i class="icon-map-marker"></i> Pune Office :</h5>
+						<b>Affulence Market Reports</b><br>
+						Old Mumbai-Pune Highway<br>
+						Wakad <br>
+						Pune <br>
+						Maharashtra <br><br>
+					<h5><i class="icon-phone"></i> <a href="tel:+1-415-871-0703">&nbsp; +1-234-567-85478</a></h5>
+
+					<h5><i class="icon-envelope"></i><a href='#'> &nbsp;<span class="__cf_email__" >sales@affuelencemarketreports.com</span></a></h5><br>
+					<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" alt="PayPal" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="sub-footer" class="sub-footer-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 text-left">
+				<p><b> &copy; 2020 Affulence Market Reports. All rights reserved</b></p>
+			</div>
+			<div class="col-lg-6 text-right" id="ftpd">
+<!--				<p>Powered by <b>Worldwide Market Reports.</b></p>-->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="backto-top-btn">
+<span class="top-btn btn btn-primary"><i class="icon-chevron-sign-up icon-2x"></i></span>
+</div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script data-cfasync="false" src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+                <script src="{% static 'assets/js/jquery-1.11.1.min.js' %}"></script>
+				<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+				<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+				<script src="{% static 'assets/js/counter/counter.js' %}"></script>
+				<script src="{% static 'assets/js/common-script.js' %}"></script>
+				<script src="{% static 'assets/js/readmore.min.js' %}"></script>
+				<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+				<script src="{% static 'assets/js/bxslide.js' %}"></script>
+				<script src="{% static 'assets/js/bxjs.js' %}"></script>
+				<script src="{% static 'js/custom.js' %}"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
+    <script type='text/javascript' src="{% static 'js/amr.js' %}"></script>
+</body>
+</html>

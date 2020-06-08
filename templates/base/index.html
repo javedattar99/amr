@@ -1,0 +1,683 @@
+
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<body>
+
+<style>#carouselExampleIndicators .carousel-item{height:700px;background-position:top}.main_carousal{max-height:550px;overflow:hidden}</style>
+<div id="main-slider">
+		<div id="carouselExampleIndicators" class="carousel slide carousel-fade main_carousal" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active" style="background-image:url(assets/images/Covid19_SMIB_new-01-min.jpg)">
+						<div class="carousel-caption d-md-block search_mob hompge">
+							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
+							<h3>SOme text <span class="color-primary">SOme text </span>SOme text </h3>
+							
+							<a class="btn btn-lg btn-primary button" href="#">Let's Get Started<i class="icon-long-arrow-right"></i></a>
+						</div>
+					</div>
+					<div class="carousel-item" style="background-image:url(assets/images/img-21.jpg)">
+						<div class="carousel-caption d-md-block search_mob hompge">
+							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
+							<h3>SOme Text <span class="color-primary">Some text</span></h3>
+							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+							<a class="btn btn-lg btn-primary button" href="contact-us.html">Get Started Now <i class="icon-long-arrow-right"></i></a>
+						</div>
+					</div>
+					<div class="carousel-item" style="background-image:url(assets/images/img-31.jpg)">
+						<div class="carousel-caption d-md-block search_mob hompge">
+							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
+							<h3>Lorem ipsum<span class="color-primary">Trends</span> Lorem ipsum</h3>
+							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+							<a class="btn btn-lg btn-primary button" href="contact-us.html">Get Started Now <i class="icon-long-arrow-right"></i></a>
+						</div>
+					</div>
+					<div class="carousel-item" style="background-image:url(assets/images/img-11.jpg)">
+						<div class="carousel-caption d-md-block search_mob hompge">
+							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
+							<h3>Lorem ipsum <span class="color-primary">Lorem ipsum </span>verticals</h3>
+							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+							<a class="btn btn-lg btn-primary button" href="contact-us.html">Get Started Now <i class="icon-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+		</div>
+	<br>
+	<div id="our-clients" class="carousel-bg">
+	<div class="container">
+		<div class="row ourClient">
+             <div class="col-md-2 col-sm-3 text-center">
+                  <h3 class="section-title">Our Clients</h3>
+             </div>
+               <div class="col-md-10 col-sm-9">
+                <div class="bx-wrapper" style="max-width:100%;">
+                     <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: auto;">
+                        <div class="bx-wrapper" style="max-width: 2185px;">
+                        	<div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 100px;">
+						<ul id="bx5" class="bxslider">
+						  <li> <a class="thumbnail"> <img alt="Lacoste" title="Lacoste" src="{% static 'assets/images/our-clients/Lacoste.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="Schindler" title="Schindler" src="{% static 'assets/images/our-clients/Schindler.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="unilever" title="unilever" src="{% static 'assets/images/our-clients/unilever.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="bosch" title="bosch" src="{% static 'assets/images/our-clients/bosch.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="gsk" title="gsk" src="{% static 'assets/images/our-clients/gsk.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="schott" title="schott" src="{% static 'assets/images/our-clients/schott.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="whirlpool" title="whirlpool" src="{% static 'assets/images/our-clients/whirlpool.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="bcg" title="bcg" src="{% static 'assets/images/our-clients/bcg.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="Pwc" title="Pwc" src="{% static 'assets/images/our-clients/Pwc.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="Sulzer" title="Sulzer" src="{% static 'assets/images/our-clients/Sulzer.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="AGC" title="AGC" src="{% static 'assets/images/our-clients/AGC.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="Nordson" title="Nordson" src="{% static 'assets/images/our-clients/Nordson.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="dow" title="dow" src="{% static 'assets/images/our-clients/dow.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="sandvik" title="sandvik" src="{% static 'assets/images/our-clients/sandvik.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="Pfizer" title="Pfizer" src="assets/images/our-clients/Pfizer.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="philips" title="philips" src="{% static 'assets/images/our-clients/philips.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="roland Berger" title="roland Berger" src="{% static 'assets/images/our-clients/roland-Berger.png' %}"> </a> </li>
+                                                     
+						  <li> <a class="thumbnail"> <img alt="Intel" title="Intel" src="{% static 'assets/images/our-clients/intel.png' %}"> </a> </li>
+                                                     
+
+                                                     
+
+						</ul></div></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+		</div>
+	</div>
+</div>	    <div id="about-us">
+	    	<div class="container">
+	    		<div class="row d-flex align-items-center">
+	    			<div class="col-lg-6 col-before">
+						<div class="mb-3">
+							<img class="w-100" src="{% static 'assets/images/img-1.jpg' %}" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>
+						</div>
+	                </div>
+	    			<div class="col-lg-6">
+						<div class="about-us mb-3">
+							<h5 class="head-after color-primary"><strong>Customized for You </strong></h5>
+		    				<h3>We are committed to offer analytical data of the highest quality in <strong>various industry domains</strong>  </h3>
+		    				<p>We offer sapient solution, expert consultation, and tailored customized solutions that make us ideal partners for your business solutions </p>
+		    				<ul class="about-list">
+		    					<li><i class="icon-ok color-primary"></i> Professional Works</li>
+		    					<li><i class="icon-ok color-primary"></i> Professional Experts</li>
+		    					<li><i class="icon-ok color-primary"></i> Professional Value</li>
+		    				</ul>
+							<a href="contact-us.html" class="btn btn-primary button"><strong>Read More</strong> </a>
+	    				</div>
+	    			</div>
+				</div>
+	    	</div>
+	    </div>
+    	<div id="our-services" class="our-services-bg">
+    		<div class="container">
+    			<div class="text-center mb-5">
+	    			<h5 class="head-after color-primary">Trending Reports By Industries</h5>
+					<h1>Trending Reports By Industries</h1>
+				</div>
+				<div class="row">
+									<div class="col-lg-3">
+						<div class="">
+						   <div class="mb-3 text-center catimg">
+								<a href="#"><img alt=" Automotive" title=" Automotive" src="{% static 'assets/images/our-services/Automotive.png' %}" onMouseOver="this.src='assets/images/our-services/white/Automotive.png'" onMouseOut="this.src='assets/images/our-services/Automotive.png'"></a>
+							</div>
+							<h3 class="text-center"><a href="category/automotive-industries.html">
+								<span> Automotive</span>
+							</a></h3>
+						</div>
+					</div>
+									<div class="col-lg-3">
+						<div class="">
+						   <div class="mb-3 text-center catimg">
+								<a href="category/aerospace-and-defence-industries.html"><img alt="Aerospace and Defence" title="Aerospace and Defence" src="{% static 'assets/images/our-services/Aerospace-and-Defence.png' %}" onMouseOver="this.src='assets/images/our-services/white/Aerospace-and-Defence.png'" onMouseOut="this.src='assets/images/our-services/Aerospace-and-Defence.png'"></a>
+							</div>
+							<h3 class="text-center"><a href="category/aerospace-and-defence-industries.html">
+								<span>Aerospace and Defence</span>
+							</a></h3>
+						</div>
+					</div>
+									<div class="col-lg-3">
+						<div class="">
+						   <div class="mb-3 text-center catimg">
+								<a href="category/agriculture-industries.html"><img alt="Agriculture" title="Agriculture" src="{% static 'assets/images/our-services/Agriculture.png' %}" onMouseOver="this.src='assets/images/our-services/white/Agriculture.png'" onMouseOut="this.src='assets/images/our-services/Agriculture.png'"></a>
+							</div>
+							<h3 class="text-center"><a href="category/agriculture-industries.html">
+								<span>Agriculture</span>
+							</a></h3>
+						</div>
+					</div>
+									<div class="col-lg-3">
+						<div class="">
+						   <div class="mb-3 text-center catimg">
+								<a href="category/chemicals-and-materials-industries.html"><img alt="Chemicals and Materials" title="Chemicals and Materials" src="{% static 'assets/images/our-services/Chemicals-and-Materials.png' %}" onMouseOver="this.src='assets/images/our-services/white/Chemicals-and-Materials.png'" onMouseOut="this.src='assets/images/our-services/Chemicals-and-Materials.png'"></a>
+							</div>
+							<h3 class="text-center"><a href="category/chemicals-and-materials-industries.html">
+								<span>Chemicals and Materials</span>
+							</a></h3>
+						</div>
+					</div>
+									<div class="col-lg-3">
+						<div class="">
+						   <div class="mb-3 text-center catimg">
+								<a href="category/consumer-goods-and-retail-industries.html"><img alt="Consumer Goods and Retail" title="Consumer Goods and Retail" src="{% static 'assets/images/our-services/Consumer-Goods-and-Retail.png' %}" onMouseOver="this.src='assets/images/our-services/white/Consumer-Goods-and-Retail.png'" onMouseOut="this.src='assets/images/our-services/Consumer-Goods-and-Retail.png'"></a>
+							</div>
+							<h3 class="text-center"><a href="category/consumer-goods-and-retail-industries.html">
+								<span>Consumer Goods and Retail</span>
+							</a></h3>
+						</div>
+					</div>
+									<div class="col-lg-3">
+						<div class="">
+						   <div class="mb-3 text-center catimg">
+								<a href="category/energy-mining-and-utilities-industries.html"><img alt="Energy, Mining and Utilities" title="Energy, Mining and Utilities" src="{% static 'assets/images/our-services/Energy-Mining-and-Utilities.png' %}" onMouseOver="this.src='assets/images/our-services/white/Energy-Mining-and-Utilities.png'" onMouseOut="this.src='assets/images/our-services/Energy-Mining-and-Utilities.png'"></a>
+							</div>
+							<h3 class="text-center"><a href="category/energy-mining-and-utilities-industries.html">
+								<span>Energy, Mining and Utilities</span>
+							</a></h3>
+						</div>
+					</div>
+									<div class="col-lg-3">
+						<div class="">
+						   <div class="mb-3 text-center catimg">
+								<a href="category/food-and-beverages-industries.html"><img alt="Food and Beverages" title="Food and Beverages" src="{% static 'assets/images/our-services/Food-and-Beverages.png' %}" onMouseOver="this.src='assets/images/our-services/white/Food-and-Beverages.png'" onMouseOut="this.src='assets/images/our-services/Food-and-Beverages.png'"></a>
+							</div>
+							<h3 class="text-center"><a href="category/food-and-beverages-industries.html">
+								<span>Food and Beverages</span>
+							</a></h3>
+						</div>
+					</div>
+									<div class="col-lg-3">
+						<div class="">
+						   <div class="mb-3 text-center catimg">
+								<a href="category/healthcare-and-pharmaceuticals-industries.html"><img alt="Healthcare and Pharmaceuticals" title="Healthcare and Pharmaceuticals" src="{% static 'assets/images/our-services/Healthcare-and-Pharmaceuticals.png' %}" onMouseOver="this.src='assets/images/our-services/white/Healthcare-and-Pharmaceuticals.png'" onMouseOut="this.src='assets/images/our-services/Healthcare-and-Pharmaceuticals.png'"></a>
+							</div>
+							<h3 class="text-center"><a href="category/healthcare-and-pharmaceuticals-industries.html">
+								<span>Healthcare and Pharmaceuticals</span>
+							</a></h3>
+						</div>
+					</div>
+								<div class="col-sm-12 text-center" id="catmain"><br>
+					<button type="submit" name="submit" class="btn btn-primary mb-3 button" id="#">View All<i class="icon-ok"></i></button>
+				</div>
+								<div class="col-lg-3 catbot">
+					<div class="">
+					   <div class="mb-3 text-center catimg">
+							<a href="category/manufacturing-and-construction-industries.html"><img alt="Manufacturing and Construction" title="Manufacturing and Construction" src="{% static 'assets/images/our-services/Manufacturing-and-Construction.png' %}" onMouseOver="this.src='assets/images/our-services/white/Manufacturing-and-Construction.png'" onMouseOut="this.src='assets/images/our-services/Manufacturing-and-Construction.png'"></a>
+						</div>
+						<h3 class="text-center"><a href="category/manufacturing-and-construction-industries.html">
+							<span>Manufacturing and Construction</span>
+						</a></h3>
+					</div>
+				</div>
+								<div class="col-lg-3 catbot">
+					<div class="">
+					   <div class="mb-3 text-center catimg">
+							<a href="category/medical-devices-industries.html"><img alt="Medical Devices" title="Medical Devices" src="{% static 'assets/images/our-services/Medical-Devices.png' %}" onMouseOver="this.src='assets/images/our-services/white/Medical-Devices.png'" onMouseOut="this.src='assets/images/our-services/Medical-Devices.png'"></a>
+						</div>
+						<h3 class="text-center"><a href="category/medical-devices-industries.html">
+							<span>Medical Devices</span>
+						</a></h3>
+					</div>
+				</div>
+								<div class="col-lg-3 catbot">
+					<div class="">
+					   <div class="mb-3 text-center catimg">
+							<a href="category/packaging-industries.html"><img alt="Packaging" title="Packaging" src="{% static 'assets/images/our-services/Packaging.png' %}" onMouseOver="this.src='assets/images/our-services/white/Packaging.png'" onMouseOut="this.src='assets/images/our-services/Packaging.png'"></a>
+						</div>
+						<h3 class="text-center"><a href="category/packaging-industries.html">
+							<span>Packaging</span>
+						</a></h3>
+					</div>
+				</div>
+								<div class="col-lg-3 catbot">
+					<div class="">
+					   <div class="mb-3 text-center catimg">
+							<a href="category/semiconductor-and-electronics-industries.html"><img alt="Semiconductor and Electronics" title="Semiconductor and Electronics" src="{% static 'assets/images/our-services/Semiconductor-and-Electronics.png' %}" onMouseOver="this.src='assets/images/our-services/white/Semiconductor-and-Electronics.png'" onMouseOut="this.src='assets/images/our-services/Semiconductor-and-Electronics.png'"></a>
+						</div>
+						<h3 class="text-center"><a href="category/semiconductor-and-electronics-industries.html">
+							<span>Semiconductor and Electronics</span>
+						</a></h3>
+					</div>
+				</div>
+								<div class="col-lg-3 catbot">
+					<div class="">
+					   <div class="mb-3 text-center catimg">
+							<a href="category/services-industries.html"><img alt="Services" title="Services" src="{% static 'assets/images/our-services/Services.png' %}" onMouseOver="this.src='assets/images/our-services/white/Services.png'" onMouseOut="this.src='assets/images/our-services/Services.png'"></a>
+						</div>
+						<h3 class="text-center"><a href="category/services-industries.html">
+							<span>Services</span>
+						</a></h3>
+					</div>
+				</div>
+								<div class="col-lg-3 catbot">
+					<div class="">
+					   <div class="mb-3 text-center catimg">
+							<a href="category/telecom-and-it-industries.html"><img alt="Telecom and IT" title="Telecom and IT" src="{% static 'assets/images/our-services/Telecom-and-IT.png' %}" onMouseOver="this.src='assets/images/our-services/white/Telecom-and-IT.png'" onMouseOut="this.src='assets/images/our-services/Telecom-and-IT.png'"></a>
+						</div>
+						<h3 class="text-center"><a href="category/telecom-and-it-industries.html">
+							<span>Telecom and IT</span>
+						</a></h3>
+					</div>
+				</div>
+									<div class="col-sm-12 text-center catbot" id="clkbot">
+						<button type="submit" name="submit" class="btn btn-primary mb-3 button" id="catlst">View Less<i class="icon-ok"></i></button> 
+					</div>
+				</div>	
+			</div>
+    	</div>
+    	
+    	<div id="counter" class="counter-bg">
+            <div class="container">
+                <div class="row"> 
+                    <div class="col-lg-3 mb-4">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <i class="icon-thumbs-up-alt icon-4x"></i>
+                            </div>
+                            <div class="col-sm-8">
+                            	<div class="count-timer">
+	                                <div><span class="timer" data-to="760" data-speed="5000"></span> <i class="icon-plus"></i></div>
+	                                <p>Projects Completed</p>
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <i class="icon-user icon-4x"></i>
+                            </div>
+                            <div class="col-sm-8">
+                            	<div class="count-timer">
+	                                <div><span class="timer" data-to="170" data-speed="5000"></span> <i class="icon-plus"></i></div>
+	                                <p>Expert Consultants</p>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <i class="icon-smile icon-4x"></i>
+                            </div>
+                            <div class="col-sm-8">
+                            	<div class="count-timer">
+	                                <div><span class="timer" data-to="270" data-speed="5000"></span> <i class="icon-plus"></i></div>
+	                                <p>Clients</p>
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <i class="icon-trophy icon-4x"></i>
+                            </div>
+                            <div class="col-sm-8">
+                            	<div class="count-timer">
+	                                <div><span class="timer" data-to="5" data-speed="5000"></span> Million </div>
+	                                <p>Data Sets</p>
+	                            </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+	    <div id="why-choose">
+	    	<div class="container">
+	    		<div class="row d-flex align-items-center">
+	    			<div class="col-lg-12">
+	    				<h1 class="head-after">Latest Reports</h1>
+	    				<p>Some text </p>
+	    				<div class="row mt-5">
+		    				<div class="col-lg-12">
+                                {% for report in reports%}
+                                <div class="card">
+									<div class="row">
+										<div class="col-sm-12">
+											<a href="{% url 'reports:reportpage' report.slug %}"><h4>{{report.title | title }}</h4></a>
+                                            <p>No. of Pages: &nbsp;&nbsp;{{report.no_of_pages}} &nbsp;&nbsp;| Industry:&nbsp;&nbsp;{{report.category.name | capfirst}}   </p>
+											<p>{{report.summary | truncatechars:400 | safe }}</p><br>
+											<div class="blog-btn">
+												 <span class="text-left"><i class="icon-calendar"></i> {{report.published_date}}</span>
+												 <span class="text-right leftf">
+												 <a class="blc" href="report/veterinary-hygiene-product-market.html">Read More <i class="icon-long-arrow-right"></i></a>
+												 </span>
+											</div>
+										</div>
+									</div>
+								</div>
+                                 {% endfor %}
+								
+							</div>
+							<div class="col-lg-4 txt-center mb-xs-3">
+                                <a href="latest-market-research-reports.html"><button type="submit" name="submit" class="btn btn-primary button"><strong>See All</strong></button></a>
+							</div>
+						</div>
+	    			</div>
+<!--	    			<div class="col-lg-5">-->
+<!--    					<img class="w-100" src="assets/images/img-30.jpg" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--	    			</div>-->
+	    		</div>
+	    	</div>
+	    </div>
+<!--		<div id="free-consultation" class="consultation-bg">-->
+<!--			<div class="container">-->
+<!--				<div class="row d-flex align-items-center">-->
+<!--					<div class="col-lg-6">-->
+<!--						<div class="consultation-left">-->
+<!--							<form action="https://www.stratagemmarketinsights.com/" method="post">-->
+<!--								<div class="row">-->
+<!--									<div class="col-sm-6">-->
+<!--										<div class="form-group">-->
+<!--											<input class="form-control" type="text" placeholder="Name" name="name" required />-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-sm-6">-->
+<!--										<div class="form-group">-->
+<!--											<input class="form-control" type="text" placeholder="Phone" name="phone" required />-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-sm-6">-->
+<!--										<div class="form-group">-->
+<!--											<input class="form-control" type="email" placeholder="Email" name="email" required />-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-sm-6">-->
+<!--										<div class="form-group">-->
+<!--											<select class="form-control" name="services" required>-->
+<!--												<option value="">- Select Services -</option>-->
+<!--												<option value="Industry Analysis Services">Industry Analysis Services</option>-->
+<!--												<option value="Business Consulting Services">Business Consulting Services</option>-->
+<!--												<option value="Market Intelligence Services">Market Intelligence Services</option>-->
+<!--												<option value="Customized Research Services">Customized Research Services</option>-->
+<!--												<option value="Long Term Engagement Model Services">Long Term Engagement Model Services</option>-->
+<!--												<option value="Country Specific Analysis Services">Country Specific Analysis Services</option>-->
+<!--											</select>-->
+<!--										</div>-->
+<!--									</div>-->
+
+<!--									<div class="col-sm-12">-->
+<!--										<div class="form-group">-->
+<!--											<textarea class="form-control" rows="4" name="message" placeholder="Message" required></textarea>-->
+<!--										</div>-->
+<!--									</div>-->
+
+<!--									<div class="col-sm-12">-->
+<!--										<button type="submit" name="submitrequest" class="btn btn-primary button">Submit Request <i class="icon-ok"></i></button>-->
+<!--									</div>-->
+
+<!--								</div>-->
+<!--							</form>-->
+<!--						</div>-->
+<!--					</div>-->
+
+<!--					<div class="col-lg-6">-->
+<!--						<div class="card consultation-right">-->
+<!--							<div class="c-col-right">-->
+<!--								<h3>Have quarries? Or need assistance?</h3>-->
+<!--								<p>Feel free to dial to speak to our experts</p>-->
+<!--								<h1><i class="icon-phone icon-2x color-primary"></i> +1-415-871-0703</h1>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--			<div id="testimonials" class="testimonials-bg">-->
+<!--				<div class="container">-->
+<!--					<div class="text-center mb-5">-->
+<!--						<h1 class="head-after head-after-w">Testimonials</h1>-->
+<!--					</div>-->
+<!--					<div class="t-row">		-->
+<!--						<div id="t-carousel" class="owl-carousel">						-->
+<!--							<div class="item card">-->
+<!--								<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--								<div class="row">-->
+<!--									<div class="col-lg-3">-->
+<!--										<div class="titem-img">-->
+<!--											<img class="w-100" src="img1/men.png" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-lg-9 text-justify">-->
+<!--										<h5>John</h5>-->
+<!--										<p>Affulence Market Reports was the place for someone like me who is always in search of the best market reports. The reports are well collated and have in-depth information. </p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--							</div>-->
+<!--							<div class="item card">-->
+<!--								<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--								<div class="row">-->
+<!--									<div class="col-lg-3">-->
+<!--										<div class="titem-img">-->
+<!--											<img class="w-100" src="img1/women.png" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-lg-9 text-justify">-->
+<!--										<h5>Eliyana</h5>-->
+<!--										<p>It is fantastic to find a bunch of people working hard in the background to ensure that we have a fair and clear idea of a market and be worry-free to invest in the same. </p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--							</div>-->
+<!--							<div class="item card">-->
+<!--								<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--								<div class="row">-->
+<!--									<div class="col-lg-3">-->
+<!--										<div class="titem-img">-->
+<!--											<img class="w-100" src="img1/men.png" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-lg-9 text-justify">-->
+<!--										<h5>David</h5>-->
+<!--										<p>The dedication of the team toward providing in-depth research on several markets is worth mentioning. I got 24-hr service, which is worth mentioning. This helped me in clearing my quarries. </p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--							</div>-->
+<!--							<div class="item card">-->
+<!--								<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--								<div class="row">-->
+<!--									<div class="col-lg-3">-->
+<!--										<div class="titem-img">-->
+<!--											<img class="w-100" src="img1/men.png" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-lg-9 text-justify">-->
+<!--										<h5>Nik</h5>-->
+<!--										<p>All the efforts Affulence Market Reports put in the background helped us in an effective campaign. Our association with Affulence Market Reports has been seamless. </p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--							</div>-->
+<!--							<div class="item card">-->
+<!--								<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--								<div class="row">-->
+<!--									<div class="col-lg-3">-->
+<!--										<div class="titem-img">-->
+<!--											<img class="w-100" src="img1/women.png" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-lg-9 text-justify">-->
+<!--										<h5>Maria</h5>-->
+<!--										<p>I was impressed by the time-bound deliveries of report and an efficient after-sale response team that handles various quarries and complaints with ease.</p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--							</div>-->
+<!--							<div class="item card">-->
+<!--								<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--								<div class="row">-->
+<!--									<div class="col-lg-3">-->
+<!--										<div class="titem-img">-->
+<!--											<img class="w-100" src="img1/men.png" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-lg-9 text-justify">-->
+<!--										<h5>Ethan</h5>-->
+<!--										<p>We are satisfied with the quality of the content. The report was good and in depth, yet affordable and is helping us to build our strategy for the mid to long term in our businesses. </p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--							</div>-->
+<!--							<div class="item card">-->
+<!--								<i class="quote-icon icon-quote-left icon-2x"></i>-->
+<!--								<div class="row">-->
+<!--									<div class="col-lg-3">-->
+<!--										<div class="titem-img">-->
+<!--											<img class="w-100" src="img1/men.png" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									<div class="col-lg-9 text-justify">-->
+<!--										<h5>Gari</h5>-->
+<!--										<p>Affulence Market Reports did excellent market research for my company. This was my first experience with the firm and I was pretty pleased with their efforts. </p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<i class="quote-icon icon-quote-right icon-2x"></i>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+			
+			
+    <!-- END TESTIMONIALS -->
+
+    <!-- START OUR BLOG -->
+<!--		  <div id="our-blog">-->
+<!--	    	<div class="container">-->
+<!--	    		<div class="text-center mb-5">-->
+<!--	    			<h5 class="head-after color-primary">Latest</h5>-->
+<!--					<h1>Our News</h1>-->
+<!--				</div>-->
+<!--	    		<div class="row">-->
+<!--						    			<div class="col-lg-4">-->
+<!--	    				<div class="blog-img">-->
+<!--		    					<p class="blog-date btn btn-primary"><i class="icon-calendar"></i> Dec, 2019								</p>-->
+<!--		    				<img src="newsimg/Coffee-drinking%20Habit%20Can%20Potentially%20Lead%20to%20Lower%20Risk%20of%20Liver%20Cancer.jpg" class="w-100" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--						</div>-->
+<!--	    				<div class="card">-->
+<!--	    					<ul>-->
+<!--		    					<li><a href="news/study-observes-that-coffee-drinking-habit-can-potentially-lead-to-lower-risk-of-liver-cancer-20.html"><b>Study Observes That Coffee-drinking Habit Can Potentially Lead to Lower Risk of Liver Cancer</b></a></li>-->
+<!--		    				</ul>-->
+<!--	    					<p>Researchers at the Queen's University recently reported people who are avid coffee drinkers are able to effectively reduce the risk of one of the most common cancer types, liver cancer, scientifically known as hepatocellular carcinoma (HCC). The findings of the latest...							</p>-->
+<!--	    					<div class="blog-btn">-->
+<!--	    						<a class="blc" href="news/study-observes-that-coffee-drinking-habit-can-potentially-lead-to-lower-risk-of-liver-cancer-20.html">Read More <i class="icon-long-arrow-right"></i></a>-->
+<!--	    					</div>-->
+<!--	    				</div>-->
+<!--	    			</div>-->
+<!--						    			<div class="col-lg-4">-->
+<!--	    				<div class="blog-img">-->
+<!--		    					<p class="blog-date btn btn-primary"><i class="icon-calendar"></i> Dec, 2019								</p>-->
+<!--		    				<img src="newsimg/First%20Death%20Caused%20by%20Fecal%20Microbiota%20Transplant%20Reported%20by%20FDA.jpg" class="w-100" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--						</div>-->
+<!--	    				<div class="card">-->
+<!--	    					<ul>-->
+<!--		    					<li><a href="news/first-death-caused-by-fecal-microbiota-transplant-reported-by-fda-19.html"><b>First Death Caused by Fecal Microbiota Transplant Reported by FDA</b></a></li>-->
+<!--		    				</ul>-->
+<!--	    					<p>The U.S. FDA (Food and Drug Administration) recently hit the headlines with the announcement of the death of a 73-year-old man from a fecal microbiota transplant (FMT), another man who fell highly sick after receiving an FMT. According to the doctors, the donor stool,...							</p>-->
+<!--	    					<div class="blog-btn">-->
+<!--	    						<a class="blc" href="news/first-death-caused-by-fecal-microbiota-transplant-reported-by-fda-19.html">Read More <i class="icon-long-arrow-right"></i></a>-->
+<!--	    					</div>-->
+<!--	    				</div>-->
+<!--	    			</div>-->
+<!--						    			<div class="col-lg-4">-->
+<!--	    				<div class="blog-img">-->
+<!--		    					<p class="blog-date btn btn-primary"><i class="icon-calendar"></i> Dec, 2019								</p>-->
+<!--		    				<img src="newsimg/Amazon%20launch%20Amazon%20Care%2c%20a%20virtual%20medical%20clinic%20for%20employees.jpg" class="w-100" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>-->
+<!--						</div>-->
+<!--	    				<div class="card">-->
+<!--	    					<ul>-->
+<!--		    					<li><a href="news/amazon-launch-amazon-care-a-virtual-medical-clinic-for-employees-18.html"><b>Amazon launch Amazon Care, a virtual medical clinic for employees</b></a></li>-->
+<!--		    				</ul>-->
+<!--	    					<p>A new healthcare service is offering to the employees and their families of the Seattle a city in Washington. It can be accessed through the app AMAZON CARE.-->
+<!--According to the CNBC, Amazon Care become an in...							</p>-->
+<!--	    					<div class="blog-btn">-->
+<!--	    						<a class="blc" href="news/amazon-launch-amazon-care-a-virtual-medical-clinic-for-employees-18.html">Read More <i class="icon-long-arrow-right"></i></a>-->
+<!--	    					</div>-->
+<!--	    				</div>-->
+<!--	    			</div>-->
+<!--							</div>-->
+<!--	</div>-->
+<!--</div>	-->
+<!--<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type='application/ld+json'> -->
+<!--{-->
+<!--  "@context": "https://www.schema.org",-->
+<!--  "@type": "Corporation",-->
+<!--  "name": "Coherent Market Insights",-->
+<!--  "url": "https://www.stratagemmarketinsights.com/",-->
+<!--  "logo": "https://www.stratagemmarketinsights.com/images/logo.png",-->
+<!--  "description": "Affulence Market Reports offers detailed business research reports with in-depth strategic insights on varied industry verticals to meet all your business need.",-->
+<!-- "sameAs" : [ "https://www.facebook.com",-->
+<!--    "https://twitter.com/",-->
+<!--     "https://www.linkedin.com"],-->
+<!--  "address": {-->
+<!--    "@type": "PostalAddress",-->
+<!--    "streetAddress": "1001 4th Ave,",-->
+<!--    "postOfficeBoxNumber": " #3200",-->
+<!--    "addressLocality": "WA 98154",-->
+<!--    "addressRegion": "Washington",-->
+<!--    "postalCode": "98154",-->
+<!--    "addressCountry": "US"-->
+<!--  },-->
+<!--  "contactPoint": {-->
+<!--    "@type": "ContactPoint",-->
+<!--    "telephone": "+1-415-871-0703",-->
+<!--    "contactType": "Sales"-->
+<!--  }-->
+<!--}-->
+<!--</script>-->
+<div id="get-services" class="get-services-bg">
+	<div class="container">
+		<div class="row d-flex align-items-center">
+			<div class="col-lg-10">
+				<h4 class="mb-2">Get In Touch</h4>
+				<p class="mb-0">In search of customized market research solution? We are here to help you. Contact us.</p>
+			</div>
+			<div class="col-lg-2">
+				<a class="btn btn-white btn-block" href="contact-us.html">Contact us <i class="icon-long-arrow-right"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+{% endblock %}
