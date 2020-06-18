@@ -8,8 +8,8 @@
 <div class="breadcum_list1">
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb">
-	<li class="breadcrumb-item">Home</li>
-	<li class="breadcrumb-item"><a target="_blank" href="{% url 'reports:reportpage' report.slug %}">{{report.meta_title | title}}</a></li>
+	<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+	<li class="breadcrumb-item"><a href="{% url 'reports:reportpage' report.slug %}">{{report.meta_title | title}}</a></li>
 	<li class="breadcrumb-item active" aria-current="page">Buy Now</li>
 </ol>
 </nav>
@@ -38,9 +38,9 @@
                             {{ form.zipcode}}
 
                             <div class="form-group row mx-1">
-                                    <input type="text"  placeholder="Enter Captcha Code" class="form-control col-6" >
+                                    <input type="text"  placeholder="Enter Captcha Code" class="form-control col-6" style="height:40px">
 
-                                <p id="captcha" class="col-4" ><strong></strong></p>
+                                <p id="captcha" class="col-4 mt-2" style="font-size:25px; color:#1ad688"><strong></strong></p>
                                       <img src="{% static 'images/reload.png' %}" id="reloadId" height="60px" width="60px" class="col-2 float-right" >
 
                           </div>

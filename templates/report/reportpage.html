@@ -34,9 +34,9 @@
 		<li><span><b>Publisher</b> : {{report.publisher.name}}</span></li>
 	</ul>
 	<div id="calltoac">
-       <a href="{% url 'reports:samplerequest' report.id%}"><button class="btncut"><span><i class="icon-download-alt"></i> &nbsp; Download Sample</span></button></a>
-	<a href=""><button class="btncut"><span><i class="icon-tags"></i> &nbsp; Request Discount</span></button> </a>
-	<a href=""><b><button class="btncut"><span><i class="icon-file-text"></i> &nbsp; Inquire Before Buy</span></button> </b> </a>
+       <a href="{% url 'reports:samplerequest' report.id%}"><button class="btncut"><span><i class="fas fa-download"></i> &nbsp; Download Sample</span></button></a>
+	<a href="{% url 'reports:discountrequest' report.id %}"><button class="btncut"><span><i class="fas fa-percentage"></i> &nbsp; Request Discount</span></button> </a>
+	<a href="{% url 'reports:inquiryrequest' report.id %}"><b><button class="btncut"><span><i class="fas fa-headset"></i> &nbsp; Inquire Before Buy</span></button> </b> </a>
 
 	</div>
 </div>
@@ -118,10 +118,13 @@
                   <div class="card-body">
                       <form method="post" action="{% url 'reports:checkout' report.id %}">
                           {% csrf_token %}
-                      <p class="card-text"><input type="radio" name="price" checked="checked" value="{{report.single_user_price}}"> Single User Licence   <strong>${{report.single_user_price}}</strong></p>
-                    <p class="card-text"><input type="radio" name="price" value="{{report.multi_user_price}}"> Multi User Licence <strong>${{report.multi_user_price}}</strong></p>
-                      <p class="card-text"><input type="radio" name="price" value="{{report.corporate_user_price}}"> Corporate User Licence <strong>${{report.corporate_user_price}}</strong></p>
-                      <button type="submit" class="btn btn-primary btn-block"><strong>Buy Now</strong></button>
+                      <p class="card-text"><input type="radio" name="price" checked="checked" value="{{report.single_user_price}}"> Single User Licence:   <strong>${{report.single_user_price}}</strong></p>
+                    <hr>
+                          <p class="card-text"><input type="radio" name="price" value="{{report.multi_user_price}}"> Multi User Licence: <strong>${{report.multi_user_price}}</strong></p>
+                      <hr>
+                          <p class="card-text"><input type="radio" name="price" value="{{report.corporate_user_price}}"> Corporate User Licence: <strong>${{report.corporate_user_price}}</strong></p>
+                     <hr>
+                      <button type="submit" class="btn btn-primary btn-block"><strong><i class="fas fa-shopping-cart"></i>&nbsp;Buy Now</strong></button>
                       </form>
                   </div>
           </div>
@@ -359,5 +362,5 @@
 <!--	</div>-->
 <!--</div>-->
 
-
+</div>
 {% endblock %}

@@ -102,7 +102,7 @@
                                                      
 						  <li> <a class="thumbnail"> <img alt="sandvik" title="sandvik" src="{% static 'assets/images/our-clients/sandvik.png' %}"> </a> </li>
                                                      
-						  <li> <a class="thumbnail"> <img alt="Pfizer" title="Pfizer" src="assets/images/our-clients/Pfizer.png' %}"> </a> </li>
+						  <li> <a class="thumbnail"> <img alt="Pfizer" title="Pfizer" src="{% static 'assets/images/our-clients/Pfizer.png' %}"> </a> </li>
                                                      
 						  <li> <a class="thumbnail"> <img alt="philips" title="philips" src="{% static 'assets/images/our-clients/philips.png' %}"> </a> </li>
                                                      
@@ -120,30 +120,56 @@
             </div>
 		</div>
 	</div>
-</div>	    <div id="about-us">
+</div>
+<div id="about-us">
 	    	<div class="container">
-	    		<div class="row d-flex align-items-center">
-	    			<div class="col-lg-6 col-before">
-						<div class="mb-3">
-							<img class="w-100" src="{% static 'assets/images/img-1.jpg' %}" alt="Affulence Market Reports | Industry Analysis and Research Reports" title="Affulence Market Reports | Industry Analysis and Research Reports"/>
+	    		<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/company-1.jpg' %}" class="card-img-top" alt="...">
+							  <div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							  </div>
 						</div>
-	                </div>
-	    			<div class="col-lg-6">
-						<div class="about-us mb-3">
-							<h5 class="head-after color-primary"><strong>Customized for You </strong></h5>
-		    				<h3>We are committed to offer analytical data of the highest quality in <strong>various industry domains</strong>  </h3>
-		    				<p>We offer sapient solution, expert consultation, and tailored customized solutions that make us ideal partners for your business solutions </p>
-		    				<ul class="about-list">
-		    					<li><i class="icon-ok color-primary"></i> Professional Works</li>
-		    					<li><i class="icon-ok color-primary"></i> Professional Experts</li>
-		    					<li><i class="icon-ok color-primary"></i> Professional Value</li>
-		    				</ul>
-							<a href="contact-us.html" class="btn btn-primary button"><strong>Read More</strong> </a>
-	    				</div>
-	    			</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/company-2.jpg' %}" class="card-img-top" alt="...">
+							  <div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							  </div>
+                         </div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/company-3.jpg' %}" class="card-img-top" alt="...">
+							  <div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							  </div>
+                         </div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12">
+						<div class="card" style="width: 18rem;">
+							  <img src="{% static 'images/company-4.jpg' %}" class="card-img-top" alt="...">
+							  <div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							  </div>
+                         </div>
+					</div>
 				</div>
 	    	</div>
 	    </div>
+
+
+
     	<div id="our-services" class="our-services-bg">
     		<div class="container">
     			<div class="text-center mb-5">
@@ -155,13 +181,13 @@
 
 
 					{% for category in categories %}
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-6 col-sm-12">
 						<div class="">
 						   <div class="mb-3 text-center catimg">
 								<a href="{% url 'category' category.slug %}"><img alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"></a>
 							</div>
 							<h3 class="text-center"><a href="{% url 'category' category.slug %}">
-								<span> {{category.name | title }}</span>
+								 {{category.name | title }}
 							</a></h3>
 						</div>
 					</div>
@@ -174,64 +200,64 @@
 			</div>
     	</div>
     	
-    	<div id="counter" class="counter-bg">
-            <div class="container">
-                <div class="row"> 
-                    <div class="col-lg-3 mb-4">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <i class="icon-thumbs-up-alt icon-4x"></i>
-                            </div>
-                            <div class="col-sm-8">
-                            	<div class="count-timer">
-	                                <div><span class="timer" data-to="760" data-speed="5000"></span> <i class="icon-plus"></i></div>
-	                                <p>Projects Completed</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-4">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <i class="icon-user icon-4x"></i>
-                            </div>
-                            <div class="col-sm-8">
-                            	<div class="count-timer">
-	                                <div><span class="timer" data-to="170" data-speed="5000"></span> <i class="icon-plus"></i></div>
-	                                <p>Expert Consultants</p>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-4">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <i class="icon-smile icon-4x"></i>
-                            </div>
-                            <div class="col-sm-8">
-                            	<div class="count-timer">
-	                                <div><span class="timer" data-to="270" data-speed="5000"></span> <i class="icon-plus"></i></div>
-	                                <p>Clients</p>
-                            	</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-4">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <i class="icon-trophy icon-4x"></i>
-                            </div>
-                            <div class="col-sm-8">
-                            	<div class="count-timer">
-	                                <div><span class="timer" data-to="5" data-speed="5000"></span> Million </div>
-	                                <p>Data Sets</p>
-	                            </div>
-                            </div>
-                        </div>
-                    </div>                
-                </div>
-            </div>
-        </div>
+<!--    	<div id="counter" class="counter-bg">-->
+<!--            <div class="container">-->
+<!--                <div class="row"> -->
+<!--                    <div class="col-lg-3 mb-4">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-sm-4">-->
+<!--                                <i class="icon-thumbs-up-alt icon-4x"></i>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-8">-->
+<!--                            	<div class="count-timer">-->
+<!--	                                <div><span class="timer" data-to="760" data-speed="5000"></span> <i class="icon-plus"></i></div>-->
+<!--	                                <p>Projects Completed</p>-->
+<!--                            	</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 mb-4">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-sm-4">-->
+<!--                                <i class="icon-user icon-4x"></i>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-8">-->
+<!--                            	<div class="count-timer">-->
+<!--	                                <div><span class="timer" data-to="170" data-speed="5000"></span> <i class="icon-plus"></i></div>-->
+<!--	                                <p>Expert Consultants</p>-->
+<!--                                 </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 mb-4">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-sm-4">-->
+<!--                                <i class="icon-smile icon-4x"></i>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-8">-->
+<!--                            	<div class="count-timer">-->
+<!--	                                <div><span class="timer" data-to="270" data-speed="5000"></span> <i class="icon-plus"></i></div>-->
+<!--	                                <p>Clients</p>-->
+<!--                            	</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 mb-4">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-sm-4">-->
+<!--                                <i class="icon-trophy icon-4x"></i>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-8">-->
+<!--                            	<div class="count-timer">-->
+<!--	                                <div><span class="timer" data-to="5" data-speed="5000"></span> Million </div>-->
+<!--	                                <p>Data Sets</p>-->
+<!--	                            </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>                -->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 	    <div id="why-choose">
 	    	<div class="container">
 	    		<div class="row d-flex align-items-center">
@@ -244,14 +270,15 @@
                                 <div class="card">
 									<div class="row">
 										<div class="col-sm-12">
-											<a href="{% url 'reports:reportpage' report.slug %}"><h4>{{report.title | title }}</h4></a>
-                                            <p>No. of Pages: &nbsp;&nbsp;{{report.no_of_pages}} &nbsp;&nbsp;| Industry:&nbsp;&nbsp;{{report.category.name | capfirst}}   </p>
-											<p>{{report.summary | truncatechars:400 | safe }}</p><br>
+											<a href="{% url 'reports:reportpage' report.slug %}"><h4 style="color:#1ad688">{{report.title | title }}</h4></a>
+                                            <p>No. of Pages: &nbsp;&nbsp;{{report.no_of_pages}} &nbsp;&nbsp;| Industry:&nbsp;&nbsp;{{report.category.name | capfirst}} </p>
+											<hr style="color:#1ad688">
+											<p>{{report.summary | truncatechars:400 | safe }}<a class="blc" href="{% url 'reports:reportpage' report.slug %}"><strong>Read More >></strong></a></p><br>
 											<div class="blog-btn">
 												 <span class="text-left"><i class="icon-calendar"></i> {{report.published_date}}</span>
-												 <span class="text-right leftf">
-												 <a class="blc" href="{% url 'reports:reportpage' report.slug %}">Read More <i class="icon-long-arrow-right"></i></a>
-												 </span>
+
+
+
 											</div>
 										</div>
 									</div>
@@ -537,20 +564,20 @@
 <!--  }-->
 <!--}-->
 <!--</script>-->
-<div id="get-services" class="get-services-bg">
-	<div class="container">
-		<div class="row d-flex align-items-center">
-			<div class="col-lg-10">
-				<h4 class="mb-2">Get In Touch</h4>
-				<p class="mb-0">In search of customized market research solution? We are here to help you. Contact us.</p>
-			</div>
-			<div class="col-lg-2">
-				<a class="btn btn-white btn-block" href="contact-us.html">Contact us <i class="icon-long-arrow-right"></i></a>
-			</div>
-		</div>
-	</div>
-</div>
+<!-- <div id="get-services" class="get-services-bg">-->
+<!--	<div class="container">-->
+<!--		<div class="row d-flex align-items-center">-->
+<!--			<div class="col-lg-10">-->
+<!--				<h4 class="mb-2">Get In Touch</h4>-->
+<!--				<p class="mb-0">In search of customized market research solution? We are here to help you. Contact us.</p>-->
+<!--			</div>-->
+<!--			<div class="col-lg-2">-->
+<!--				<a class="btn btn-white btn-block" href="contact-us.html">Contact us <i class="icon-long-arrow-right"></i></a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
 
 
-</body>
+
 {% endblock %}

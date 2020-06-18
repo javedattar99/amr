@@ -59,6 +59,57 @@ def requestSample(request,id):
         form = LeadForm()
     return render(request, 'report/request-sample.html', {'form':form,'report':report})
 
+def requestDiscount(request,id):
+    report = get_object_or_404(Report, id=id)
+    if request.method == 'POST':
+        form = LeadForm(request.POST)
+        if form.is_valid():
+            lead_form=form.save(commit=False)
+            lead_form.report = report
+            lead_form.request_type = 'Request Discount'
+            lead_form.save()
+            emailBody = 'Report Name:'+ report.title + '\n\n' + 'Client Name:' + lead_form.full_name + '\n\n' 'Client Email:'+ lead_form.corporate_email + '\n\n' + 'Phone:' + str(lead_form.phone) + '\n\n' + 'Country:' + str(lead_form.country) +'\n\n' + 'Category:'+ report.category.name +'\n\n'+'Publisher :'+report.publisher.name+ '\n\n' +'Company:' + lead_form.company + '\n\n' + 'Job Title:' + lead_form.job_title +'\n\n' +'Price:' + str(report.single_user_price) +'\n\n' +'Comments:' + lead_form.comment
+            send_mail(
+                'Lead - Discount Request',
+                 emailBody,
+                'sales@affluencemarketreports.com',
+                ['sales@affluencemarketreports.com'],
+                fail_silently=False,
+            )
+            return redirect('thankyou')
+        else:
+            print('Form invalid')
+    else:
+        form = LeadForm()
+    return render(request, 'report/request-discount.html', {'form':form,'report':report})
+
+def requestInquiry(request,id):
+    report = get_object_or_404(Report, id=id)
+    if request.method == 'POST':
+        form = LeadForm(request.POST)
+        if form.is_valid():
+            lead_form=form.save(commit=False)
+            lead_form.report = report
+            lead_form.request_type = 'Request Inquiry'
+            lead_form.save()
+            emailBody = 'Report Name:'+ report.title + '\n\n' + 'Client Name:' + lead_form.full_name + '\n\n' 'Client Email:'+ lead_form.corporate_email + '\n\n' + 'Phone:' + str(lead_form.phone) + '\n\n' + 'Country:' + str(lead_form.country) +'\n\n' + 'Category:'+ report.category.name +'\n\n'+'Publisher :'+report.publisher.name+ '\n\n' +'Company:' + lead_form.company + '\n\n' + 'Job Title:' + lead_form.job_title +'\n\n' +'Price:' + str(report.single_user_price) +'\n\n' +'Comments:' + lead_form.comment
+            send_mail(
+                'Lead - Inquiry Before Buying Request',
+                 emailBody,
+                'sales@affluencemarketreports.com',
+                ['sales@affluencemarketreports.com'],
+                fail_silently=False,
+            )
+            return redirect('thankyou')
+        else:
+            print('Form invalid')
+    else:
+        form = LeadForm()
+    return render(request, 'report/request-inquiry.html', {'form':form,'report':report})
+
+
+
+
 
 def checkout(request, id):
     report = get_object_or_404(Report, id=id)
