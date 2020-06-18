@@ -37,7 +37,7 @@
 <meta property="og:title" content="Affulence Market Reports | Industry Analysis and Research Reports"/>
 <meta property="og:description" content="Affulence Market Reports offers detailed business research reports with in-depth strategic insights on varied industry verticals to meet all your business need."/>
 <meta property="og:image" content="images/logos.png"/>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149866794-1"></script>
+
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-149866794-1');</script>
 </head>
 <body>
@@ -64,7 +64,7 @@
 <div id="header">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg">
-			<a class="navbar-brand" href="index.html"><img src="{% static 'images/amr-logo.jpg' %}" class="smi_logo" alt="Affulence Market Reports" title="Affulence Market Reports" height="80px"></a>
+			<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/amr-logo.jpg' %}" class="smi_logo" alt="Affulence Market Reports" title="Affulence Market Reports" height="80px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				<span class="navbar-toggler-icon"></span>
@@ -73,10 +73,10 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="index.html" class="menu-top-active">Home</a>
+							<a class="nav-link" href="{% url 'index' %}" class="menu-top-active">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about-us.html">About Us</a>
+							<a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
@@ -136,16 +136,16 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
 								<div class="dropdown-menu animate slideIn" data-animations="fadeInDown">
-									<a class="dropdown-item" href="service/industry-analysis.html">Industry Analysis Services</a>
-									<a class="dropdown-item" href="service/business-consulting.html">Business Consulting Services</a>
-									<a class="dropdown-item" href="service/market-intelligence.html">Market Intelligence Services</a>
+									<a class="dropdown-item" href="#">Industry Analysis Services</a>
+									<a class="dropdown-item" href="#">Business Consulting Services</a>
+									<a class="dropdown-item" href="#">Market Intelligence Services</a>
 									<a class="dropdown-item" href="service/customized-research.html">Customized Research Services</a>
 									<a class="dropdown-item" href="service/long-term-engagement-model.html">Long Term Engagement Model Services</a>
 									<a class="dropdown-item" href="service/country-specific-analysis.html">Country Specific Analysis Services</a>
 								</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="news.html">Contact Us</a>
+							<a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
 						</li>
 
 						<li class="nav-item search_btn">
@@ -215,21 +215,20 @@
 				<h3 class="head-after">Menu</h3>
 				  <div class="mt-2">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="latest-market-research-reports.html">Latest Reports</a></li>
-						<li><a href="news.html">News</a></li>
-						<li><a href="contact-us.html">Contact Us</a></li>
-						 <li><a href="about-us.html">About Us</a></li>
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'latestreports' %}">Latest Reports</a></li>
+						<li><a href="{% url 'contactus' %}">Contact Us</a></li>
+						 <li><a href="{% url 'aboutus' %}">About Us</a></li>
 					</ul>
 				  </div>
 			</div>
 			<div class="col-lg-2 mb-3">
-				<h3 class="head-after">Quick Links</h3>
+				<h3 class="head-after">Legal</h3>
 				<div class="mt-2">
 					<ul>
 						<li><a href="privacy-policy.html" rel="nofollow">Privacy Policy</a></li>
 						<li><a href="disclaimer.html" rel="nofollow">Disclaimer</a></li>
-						<li><a href="terms-and-conditions.html" rel="nofollow">Terms and Conditions</a></li>
+						<li><a href="terms-and-conditions.html" rel="nofollow">Terms of Use</a></li>
 						<li><a href="return-policy.html" rel="nofollow">Return Policy</a></li>
 						<li><a href="how-to-order.html" rel="nofollow">How to order</a></li>
 						<li><a href="format-and-delivery.html" rel="nofollow">Format and Delivery</a></li>
@@ -246,7 +245,7 @@
 						Wakad <br>
 						Pune <br>
 						Maharashtra <br><br>
-					<h5><i class="icon-phone"></i> <a href="tel:+1-415-871-0703">&nbsp; +1-234-567-85478</a></h5>
+					<h5><i class="icon-phone"></i> <a href="">&nbsp; +1-234-567-85478</a></h5>
 
 					<h5><i class="icon-envelope"></i><a href='#'> &nbsp;<span class="__cf_email__" >sales@affuelencemarketreports.com</span></a></h5><br>
 					<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" alt="PayPal" />

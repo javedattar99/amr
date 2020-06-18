@@ -17,7 +17,7 @@ class Report(models.Model):
     # report_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=1000)
     meta_title = models.CharField(max_length=200)
-    slug = models.SlugField(unique=True, blank=True,null=True)
+    slug = models.SlugField(unique=True, blank=True,null=True,max_length=255)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     # image_icon = models.ForeignKey('Image', on_delete=models.CASCADE)
     publisher = models.ForeignKey('Publisher', models.CASCADE)
@@ -59,7 +59,7 @@ class Image(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
     slug = models.SlugField(blank=True,unique=True)
     image = models.ImageField(upload_to='category/', blank=True, null=True)
@@ -78,7 +78,7 @@ class Category(models.Model):
 
 
 class Publisher(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
     slug = models.SlugField(blank=True,unique=True)
     image = models.ImageField(upload_to='publishers/', blank=True, null=True)

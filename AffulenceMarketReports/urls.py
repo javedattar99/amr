@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from report.views import indexView,categoryPage,publisherPage
+from report.views import indexView,categoryPage,publisherPage,aboutus,contactus,latestReports,thankyouPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', indexView, name='index'),
+    path('latest-reports/', latestReports, name='latestreports'),
+    path('about-us/', aboutus, name='aboutus'),
+    path('contact-us/', contactus, name='contactus'),
+    path('thank-you/', thankyouPage, name='thankyou'),
+
     path('category/<slug:slug>/', categoryPage, name='category'),
     path('publisher/<slug:slug>/', publisherPage, name='publisher'),
     path('industry-analysis/', include('report.urls', namespace='reports')),

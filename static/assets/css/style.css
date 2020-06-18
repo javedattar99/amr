@@ -292,6 +292,7 @@ blockquote {
 	-moz-transition: all 0.4s;
 	-o-transition: all 0.4s
 }
+/*
 .card:hover {
 	color: #fff;
 	background-color: #1ad688;
@@ -316,7 +317,7 @@ blockquote {
 }
 .card:hover .btn i {
 	color: #1ad688;
-}
+} */
 .form-control,
 select,
 select.form-control:not([size]):not([multiple]) {
@@ -1466,10 +1467,12 @@ textarea {
 	margin: 0 auto;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, .2)
 }
+/*
 .btncut span {
 	position: relative;
 	z-index: 1
 }
+
 .btncut:after {
 	content: "";
 	position: absolute;
@@ -1486,7 +1489,7 @@ textarea {
 .btncut:hover:after {
 	-webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
 	transform: translateX(-9%) translateY(-25%) rotate(45deg)
-}
+} */
 .link {
 	font-size: 20px;
 	margin-top: 30px
@@ -1910,7 +1913,7 @@ textarea {
     padding: 10px 0;
 }
 .breadcum_list ol.breadcrumb li.breadcrumb-item, .breadcum_list ol.breadcrumb li.breadcrumb-item.active {
-    max-width: 250px;
+    max-width:500px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2081,10 +2084,10 @@ a.nav-link.Navsearch_btn {position: relative;}
     right: 0;
     margin: auto;
 }
-.card.mob_form:hover h2, .card.mob_form:hover p{color: black}
+/*.card.mob_form:hover h2, .card.mob_form:hover p{color: black}
 .card.mob_form:hover {
     background: white;
-}
+} */
 div#aboutt ul li {
     text-align: left;
     list-style: disc;

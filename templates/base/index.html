@@ -19,7 +19,7 @@
 					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 				</ol>
 				<div class="carousel-inner" role="listbox">
-					<div class="carousel-item active" style="background-image:url(assets/images/Covid19_SMIB_new-01-min.jpg)">
+					<div class="carousel-item active" style="background-image:url({% static 'images/slider6.jpeg' %})">
 						<div class="carousel-caption d-md-block search_mob hompge">
 							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
 							<h3>SOme text <span class="color-primary">SOme text </span>SOme text </h3>
@@ -27,7 +27,7 @@
 							<a class="btn btn-lg btn-primary button" href="#">Let's Get Started<i class="icon-long-arrow-right"></i></a>
 						</div>
 					</div>
-					<div class="carousel-item" style="background-image:url(assets/images/img-21.jpg)">
+					<div class="carousel-item" style="background-image:url({% static 'images/slider3.jpg' %})">
 						<div class="carousel-caption d-md-block search_mob hompge">
 							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
 							<h3>SOme Text <span class="color-primary">Some text</span></h3>
@@ -35,7 +35,7 @@
 							<a class="btn btn-lg btn-primary button" href="contact-us.html">Get Started Now <i class="icon-long-arrow-right"></i></a>
 						</div>
 					</div>
-					<div class="carousel-item" style="background-image:url(assets/images/img-31.jpg)">
+					<div class="carousel-item" style="background-image:url({% static 'images/slider4.jpg' %})">
 						<div class="carousel-caption d-md-block search_mob hompge">
 							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
 							<h3>Lorem ipsum<span class="color-primary">Trends</span> Lorem ipsum</h3>
@@ -43,7 +43,7 @@
 							<a class="btn btn-lg btn-primary button" href="contact-us.html">Get Started Now <i class="icon-long-arrow-right"></i></a>
 						</div>
 					</div>
-					<div class="carousel-item" style="background-image:url(assets/images/img-11.jpg)">
+					<div class="carousel-item" style="background-image:url({% static 'images/slider5.jpg' %})">
 						<div class="carousel-caption d-md-block search_mob hompge">
 							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
 							<h3>Lorem ipsum <span class="color-primary">Lorem ipsum </span>verticals</h3>
@@ -147,156 +147,29 @@
     	<div id="our-services" class="our-services-bg">
     		<div class="container">
     			<div class="text-center mb-5">
-	    			<h5 class="head-after color-primary">Trending Reports By Industries</h5>
-					<h1>Trending Reports By Industries</h1>
+	    			<h3 class="head-after color-primary">Trending Reports By Industries</h3>
+
 				</div>
 				<div class="row">
-									<div class="col-lg-3">
+					{% if categories %}
+
+
+					{% for category in categories %}
+					<div class="col-lg-3">
 						<div class="">
 						   <div class="mb-3 text-center catimg">
-								<a href="#"><img alt=" Automotive" title=" Automotive" src="{% static 'assets/images/our-services/Automotive.png' %}" onMouseOver="this.src='assets/images/our-services/white/Automotive.png'" onMouseOut="this.src='assets/images/our-services/Automotive.png'"></a>
+								<a href="{% url 'category' category.slug %}"><img alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"></a>
 							</div>
-							<h3 class="text-center"><a href="category/automotive-industries.html">
-								<span> Automotive</span>
+							<h3 class="text-center"><a href="{% url 'category' category.slug %}">
+								<span> {{category.name | title }}</span>
 							</a></h3>
 						</div>
 					</div>
-									<div class="col-lg-3">
-						<div class="">
-						   <div class="mb-3 text-center catimg">
-								<a href="category/aerospace-and-defence-industries.html"><img alt="Aerospace and Defence" title="Aerospace and Defence" src="{% static 'assets/images/our-services/Aerospace-and-Defence.png' %}" onMouseOver="this.src='assets/images/our-services/white/Aerospace-and-Defence.png'" onMouseOut="this.src='assets/images/our-services/Aerospace-and-Defence.png'"></a>
-							</div>
-							<h3 class="text-center"><a href="category/aerospace-and-defence-industries.html">
-								<span>Aerospace and Defence</span>
-							</a></h3>
-						</div>
-					</div>
-									<div class="col-lg-3">
-						<div class="">
-						   <div class="mb-3 text-center catimg">
-								<a href="category/agriculture-industries.html"><img alt="Agriculture" title="Agriculture" src="{% static 'assets/images/our-services/Agriculture.png' %}" onMouseOver="this.src='assets/images/our-services/white/Agriculture.png'" onMouseOut="this.src='assets/images/our-services/Agriculture.png'"></a>
-							</div>
-							<h3 class="text-center"><a href="category/agriculture-industries.html">
-								<span>Agriculture</span>
-							</a></h3>
-						</div>
-					</div>
-									<div class="col-lg-3">
-						<div class="">
-						   <div class="mb-3 text-center catimg">
-								<a href="category/chemicals-and-materials-industries.html"><img alt="Chemicals and Materials" title="Chemicals and Materials" src="{% static 'assets/images/our-services/Chemicals-and-Materials.png' %}" onMouseOver="this.src='assets/images/our-services/white/Chemicals-and-Materials.png'" onMouseOut="this.src='assets/images/our-services/Chemicals-and-Materials.png'"></a>
-							</div>
-							<h3 class="text-center"><a href="category/chemicals-and-materials-industries.html">
-								<span>Chemicals and Materials</span>
-							</a></h3>
-						</div>
-					</div>
-									<div class="col-lg-3">
-						<div class="">
-						   <div class="mb-3 text-center catimg">
-								<a href="category/consumer-goods-and-retail-industries.html"><img alt="Consumer Goods and Retail" title="Consumer Goods and Retail" src="{% static 'assets/images/our-services/Consumer-Goods-and-Retail.png' %}" onMouseOver="this.src='assets/images/our-services/white/Consumer-Goods-and-Retail.png'" onMouseOut="this.src='assets/images/our-services/Consumer-Goods-and-Retail.png'"></a>
-							</div>
-							<h3 class="text-center"><a href="category/consumer-goods-and-retail-industries.html">
-								<span>Consumer Goods and Retail</span>
-							</a></h3>
-						</div>
-					</div>
-									<div class="col-lg-3">
-						<div class="">
-						   <div class="mb-3 text-center catimg">
-								<a href="category/energy-mining-and-utilities-industries.html"><img alt="Energy, Mining and Utilities" title="Energy, Mining and Utilities" src="{% static 'assets/images/our-services/Energy-Mining-and-Utilities.png' %}" onMouseOver="this.src='assets/images/our-services/white/Energy-Mining-and-Utilities.png'" onMouseOut="this.src='assets/images/our-services/Energy-Mining-and-Utilities.png'"></a>
-							</div>
-							<h3 class="text-center"><a href="category/energy-mining-and-utilities-industries.html">
-								<span>Energy, Mining and Utilities</span>
-							</a></h3>
-						</div>
-					</div>
-									<div class="col-lg-3">
-						<div class="">
-						   <div class="mb-3 text-center catimg">
-								<a href="category/food-and-beverages-industries.html"><img alt="Food and Beverages" title="Food and Beverages" src="{% static 'assets/images/our-services/Food-and-Beverages.png' %}" onMouseOver="this.src='assets/images/our-services/white/Food-and-Beverages.png'" onMouseOut="this.src='assets/images/our-services/Food-and-Beverages.png'"></a>
-							</div>
-							<h3 class="text-center"><a href="category/food-and-beverages-industries.html">
-								<span>Food and Beverages</span>
-							</a></h3>
-						</div>
-					</div>
-									<div class="col-lg-3">
-						<div class="">
-						   <div class="mb-3 text-center catimg">
-								<a href="category/healthcare-and-pharmaceuticals-industries.html"><img alt="Healthcare and Pharmaceuticals" title="Healthcare and Pharmaceuticals" src="{% static 'assets/images/our-services/Healthcare-and-Pharmaceuticals.png' %}" onMouseOver="this.src='assets/images/our-services/white/Healthcare-and-Pharmaceuticals.png'" onMouseOut="this.src='assets/images/our-services/Healthcare-and-Pharmaceuticals.png'"></a>
-							</div>
-							<h3 class="text-center"><a href="category/healthcare-and-pharmaceuticals-industries.html">
-								<span>Healthcare and Pharmaceuticals</span>
-							</a></h3>
-						</div>
-					</div>
-								<div class="col-sm-12 text-center" id="catmain"><br>
-					<button type="submit" name="submit" class="btn btn-primary mb-3 button" id="#">View All<i class="icon-ok"></i></button>
-				</div>
-								<div class="col-lg-3 catbot">
-					<div class="">
-					   <div class="mb-3 text-center catimg">
-							<a href="category/manufacturing-and-construction-industries.html"><img alt="Manufacturing and Construction" title="Manufacturing and Construction" src="{% static 'assets/images/our-services/Manufacturing-and-Construction.png' %}" onMouseOver="this.src='assets/images/our-services/white/Manufacturing-and-Construction.png'" onMouseOut="this.src='assets/images/our-services/Manufacturing-and-Construction.png'"></a>
-						</div>
-						<h3 class="text-center"><a href="category/manufacturing-and-construction-industries.html">
-							<span>Manufacturing and Construction</span>
-						</a></h3>
-					</div>
-				</div>
-								<div class="col-lg-3 catbot">
-					<div class="">
-					   <div class="mb-3 text-center catimg">
-							<a href="category/medical-devices-industries.html"><img alt="Medical Devices" title="Medical Devices" src="{% static 'assets/images/our-services/Medical-Devices.png' %}" onMouseOver="this.src='assets/images/our-services/white/Medical-Devices.png'" onMouseOut="this.src='assets/images/our-services/Medical-Devices.png'"></a>
-						</div>
-						<h3 class="text-center"><a href="category/medical-devices-industries.html">
-							<span>Medical Devices</span>
-						</a></h3>
-					</div>
-				</div>
-								<div class="col-lg-3 catbot">
-					<div class="">
-					   <div class="mb-3 text-center catimg">
-							<a href="category/packaging-industries.html"><img alt="Packaging" title="Packaging" src="{% static 'assets/images/our-services/Packaging.png' %}" onMouseOver="this.src='assets/images/our-services/white/Packaging.png'" onMouseOut="this.src='assets/images/our-services/Packaging.png'"></a>
-						</div>
-						<h3 class="text-center"><a href="category/packaging-industries.html">
-							<span>Packaging</span>
-						</a></h3>
-					</div>
-				</div>
-								<div class="col-lg-3 catbot">
-					<div class="">
-					   <div class="mb-3 text-center catimg">
-							<a href="category/semiconductor-and-electronics-industries.html"><img alt="Semiconductor and Electronics" title="Semiconductor and Electronics" src="{% static 'assets/images/our-services/Semiconductor-and-Electronics.png' %}" onMouseOver="this.src='assets/images/our-services/white/Semiconductor-and-Electronics.png'" onMouseOut="this.src='assets/images/our-services/Semiconductor-and-Electronics.png'"></a>
-						</div>
-						<h3 class="text-center"><a href="category/semiconductor-and-electronics-industries.html">
-							<span>Semiconductor and Electronics</span>
-						</a></h3>
-					</div>
-				</div>
-								<div class="col-lg-3 catbot">
-					<div class="">
-					   <div class="mb-3 text-center catimg">
-							<a href="category/services-industries.html"><img alt="Services" title="Services" src="{% static 'assets/images/our-services/Services.png' %}" onMouseOver="this.src='assets/images/our-services/white/Services.png'" onMouseOut="this.src='assets/images/our-services/Services.png'"></a>
-						</div>
-						<h3 class="text-center"><a href="category/services-industries.html">
-							<span>Services</span>
-						</a></h3>
-					</div>
-				</div>
-								<div class="col-lg-3 catbot">
-					<div class="">
-					   <div class="mb-3 text-center catimg">
-							<a href="category/telecom-and-it-industries.html"><img alt="Telecom and IT" title="Telecom and IT" src="{% static 'assets/images/our-services/Telecom-and-IT.png' %}" onMouseOver="this.src='assets/images/our-services/white/Telecom-and-IT.png'" onMouseOut="this.src='assets/images/our-services/Telecom-and-IT.png'"></a>
-						</div>
-						<h3 class="text-center"><a href="category/telecom-and-it-industries.html">
-							<span>Telecom and IT</span>
-						</a></h3>
-					</div>
-				</div>
-									<div class="col-sm-12 text-center catbot" id="clkbot">
-						<button type="submit" name="submit" class="btn btn-primary mb-3 button" id="catlst">View Less<i class="icon-ok"></i></button> 
-					</div>
+					{% endfor %}
+                    {% else %}
+					   <span> Please Add Categories </span>
+					{% endif %}
+
 				</div>	
 			</div>
     	</div>
@@ -364,7 +237,7 @@
 	    		<div class="row d-flex align-items-center">
 	    			<div class="col-lg-12">
 	    				<h1 class="head-after">Latest Reports</h1>
-	    				<p>Some text </p>
+
 	    				<div class="row mt-5">
 		    				<div class="col-lg-12">
                                 {% for report in reports%}
@@ -377,7 +250,7 @@
 											<div class="blog-btn">
 												 <span class="text-left"><i class="icon-calendar"></i> {{report.published_date}}</span>
 												 <span class="text-right leftf">
-												 <a class="blc" href="report/veterinary-hygiene-product-market.html">Read More <i class="icon-long-arrow-right"></i></a>
+												 <a class="blc" href="{% url 'reports:reportpage' report.slug %}">Read More <i class="icon-long-arrow-right"></i></a>
 												 </span>
 											</div>
 										</div>
@@ -387,7 +260,7 @@
 								
 							</div>
 							<div class="col-lg-4 txt-center mb-xs-3">
-                                <a href="latest-market-research-reports.html"><button type="submit" name="submit" class="btn btn-primary button"><strong>See All</strong></button></a>
+                                <a href="{% url 'latestreports' %}"><button type="submit" name="submit" class="btn btn-primary button"><strong>See All</strong></button></a>
 							</div>
 						</div>
 	    			</div>

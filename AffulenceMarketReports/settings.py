@@ -78,9 +78,17 @@ WSGI_APPLICATION = 'AffulenceMarketReports.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'amr_db',
+        'USER': 'postgres',
+        'PASSWORD': 'admin123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -129,8 +137,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 #SMTP Mail Configuation
-EMAIL_HOST = 'mail.4arcresearch.com'
-EMAIL_PORT = 26
-EMAIL_HOST_USER = 'sales@4arcresearch.com'
-EMAIL_HOST_PASSWORD = 'sales@2019'
+EMAIL_HOST = 'smtp.affluencemarketreports.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sales@affluencemarketreports.com'
+EMAIL_HOST_PASSWORD = 'qDFtQwh0'
 EMAIL_USE_TLS = True

@@ -1,10 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Publisher Page</h1>
-</body>
-</html>
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+		<div class="container">
+			<div class="text-center">
+				<h1 class="head-after h1fs">Reports By {{publisher.name | title}}</h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 mb-3">
+					<div class="card-d">
+						<h4 class="head-after">Reports By Publishers</h4>
+						<div class="mt-2">
+							<ul class="side-nav-bar">
+                                {% for allpublisher in all_publishers %}
+								{% if allpublisher.name == publisher.name %}
+
+									<li class="active">
+										<a href="{% url 'publisher' allpublisher.slug %}" title="{{allpublisher.name}}">
+											<strong>{{ allpublisher.name | title}}</strong>
+										</a>
+									</li>
+								{% else %}
+								<li>
+										<a href="{% url 'publisher' allpublisher.slug %}" title="{{allpublisher.name}}">
+											<strong>{{ allpublisher.name | title}}</strong>
+										</a>
+								</li>
+								{% endif %}
+
+                                {% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>							
+				<div class="col-lg-9">
+                                          {% for report in reports %}
+											<div class="card" >
+													  <div class="card-body">
+														<h5 class="card-title">{{report.title}}</h5>
+														  <p class="card-text">{{report.summary | truncatechars:250 | safe}}<a href="#" style="color:blue;"><strong>Read More>></strong></a></p>
+														  <p class="card-text">Date: {{report.published_date}}</p>
+
+													  </div>
+													</div>
+					                      {% endfor %}
+				</div>
+
+			</div>
+
+
+
+
+			<div class="pagination-btn text-center mt-12">
+					{% if reports.has_other_pages %}
+				     <nav>
+						<ul class='pagination'>
+							{% if reports.has_previous %}
+							<li class='page-item'>
+								<a class='page-link' href="?page={{ reports.previous_page_number }}">Previous</a>
+							</li>
+							{% else %}
+							<li class='page-item disabled'><a class='page-link'>Previous</a></li>
+							{% endif %}
+                           {% for i in reports.paginator.page_range %}
+                           {% if reports.number == i %}
+
+							<li class='page-item active'>
+								<a class='page-link'>{{i}}</a></li>
+							{% else %}
+							<li class='page-item'><a class='page-link' href="?page={{ i }}">{{i}}</a></li>
+							{% endif %}
+							{% endfor %}
+
+							{% if reports.has_next %}
+                            <li class='page-item'><a class='page-link' href="?page={{ reports.next_page_number }}">Next</a></li>
+                          {% else %}
+                         <li class='page-item disabled'><a class='page-link'>Next</a></li>
+                           {% endif %}
+						</ul>
+					</nav>
+				{% endif %}
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
+
+

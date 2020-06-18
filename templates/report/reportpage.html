@@ -15,9 +15,9 @@
 <div class="breadcum_list">
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="#">Home</a></li>
-<li class="breadcrumb-item"><a href="#">{{report.category.name}}</a></li>
-<li class="breadcrumb-item active" aria-current="page">{{report.title | title }}</li>
+<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+<li class="breadcrumb-item"><a href="{% url 'category' category.slug %}">{{report.category.name}}</a></li>
+<li class="breadcrumb-item active" aria-current="page">{{report.meta_title | title }}</li>
 </ol>
 </nav>
 </div>
@@ -61,11 +61,11 @@
 <div class="tab-content rep-rd-content tab-wrapper" id="pills-tabContent">
 <div class="tab-pane fade active show" id="rep-overview" role="tabpanel" aria-labelledby="rep-overview-tab">
 
-<p>{{report.summary | safe}}</p>
+<p>{{report.summary | safe | linebreaks }}</p>
 
 </div>
 <div class="tab-pane fade" id="rep-toc" role="tabpanel" aria-labelledby="rep-toc-tab">
-	{{report.tabel_of_content | safe}}</div>
+	{{report.tabel_of_content | safe | linebreaks }}</div>
 <div class="tab-pane fade" id="rel-rep" role="tabpanel" aria-labelledby="rel-rep-tab"> 
 <div class="row">
  <div class="col-lg-12">
@@ -224,56 +224,7 @@
         </div>
      </div>
     </div>
-<script data-cfasync="false" src="https://www.stratagemmarketinsights.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-                  {
-    "@type": "Question",
-    "name": "What is the scope of this report?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The report efficiently evaluates the market from various dimensions to deliver an end-product that is informative, elaborate, and accurate and includes detailed market segmentation, regional analysis, and competitive landscape of the industry.<a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
-    }
-  } ,              {
-    "@type": "Question",
-    "name": "Does this report estimates the current market size?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The report efficiently evaluates the current market size and provides industry forecast. The market was valued at xx Million US$ in 2019, and is expected to grow at a CAGR of xx% during the period 2020-2027.  <a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
-    }
-  } ,              {
-    "@type": "Question",
-    "name": "Does the report provides Market Size in terms of – Value (US$ Mn) and Volume (thousand ton / metric ton / cubic meter) - of the market?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The report efficiently evaluates the current market size and provides forecast for the industry in terms of Value (US$ Mn) and Volume (thousand ton / metric ton / cubic meter).<a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
-    }
-  },{
-    "@type": "Question",
-    "name": "Which segments covered in this report?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Market is segmented by Product Types, Applications, Technology, End-use Industries, Distribution channel, and Regions.<a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
-    }
-  },{
-    "@type": "Question",
-    "name": "What are the key factors covered in this report?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The report presents the current market size, and market forecast, market opportunities, key drivers and restraints, regulatory scenario, industry trend, PESTLE analysis, PORTER’s analysis, new product approvals/launch, promotion and marketing initiatives, pricing analysis, export-import analysis, trade analysis, competitive landscape which help businesses in decision making. The analysis data is based on current and historical market trends which help in investment related decisions. <a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
-    }
-  },{
-    "@type": "Question",
-    "name": "Does this report offer customization?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Custom research is crucial components of the business strategy which helps any organization to gain insight into specific business sector, aligned with specific area of interest. Thus, SMI offers more accurate, pragmatic, and actionable information specifically tailored to suit your business needs.<a href='https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3'> Read More</a>"
-    }
-  }]
-}
-</script>
+
   </div>
 </div>   
 </div>
@@ -393,43 +344,7 @@
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
-<script type="application/ld+json">
-{
-"@context" : "http://schema.org",
-"@type" : "WebSite",
-"name" : "Stratagem Market Insights",
-"alternateName" : "SMI",
-"url" : "https://www.stratagemmarketinsights.com"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-  "@type": "ListItem",
-  "position":1,
-  "item": {"@id": "https://www.stratagemmarketinsights.com/",
-  "name": "Home",
-  "image": "https://www.stratagemmarketinsights.com/images/logo.png"
-  }
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "item": {
-      "@id": "https://www.stratagemmarketinsights.com/category/medical-devices-industries",
-      "name": "Category"
-      }
-  },{
-    "@type": "ListItem",
-    "position": 3,
-    "item": {
-      "@id": "https://www.stratagemmarketinsights.com/report/3d-cell-culture-market-3",
-      "name": "3D Cell Culture Market 2020 By Manufacturers, Regions, Types, Applications And Forecast To 2026"
-    }
-  }]
-}
-</script>			
+
 <!--<div id="get-services" class="get-services-bg">-->
 <!--	<div class="container">-->
 <!--		<div class="row d-flex align-items-center">-->
