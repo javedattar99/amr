@@ -24,7 +24,7 @@
 							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
 							<h3>SOme text <span class="color-primary">SOme text </span>SOme text </h3>
 							
-							<a class="btn btn-lg btn-primary" href="#">Let's Get Started<i class="icon-long-arrow-right"></i></a>
+							<a class="btn btn-lg btn-primary" href="{% url 'latestreports' %}">Let's Get Started<i class="icon-long-arrow-right"></i></a>
 						</div>
 					</div>
 					<div class="carousel-item" style="background-image:url({% static 'images/slider3.jpg' %})">
@@ -32,7 +32,7 @@
 							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
 							<h3>SOme Text <span class="color-primary">Some text</span></h3>
 							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-							<a class="btn btn-lg btn-primary " href="contact-us.html">Get Started Now <i class="icon-long-arrow-right"></i></a>
+							<a class="btn btn-lg btn-primary " href="{% url 'latestreports' %}">Get Started Now <i class="icon-long-arrow-right"></i></a>
 						</div>
 					</div>
 					<div class="carousel-item" style="background-image:url({% static 'images/slider4.jpg' %})">
@@ -40,7 +40,7 @@
 							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
 							<h3>Lorem ipsum<span class="color-primary">Trends</span> Lorem ipsum</h3>
 							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-							<a class="btn btn-lg btn-primary" href="contact-us.html">Get Started Now <i class="icon-long-arrow-right"></i></a>
+							<a class="btn btn-lg btn-primary" href="{% url 'latestreports' %}">Get Started Now <i class="icon-long-arrow-right"></i></a>
 						</div>
 					</div>
 					<div class="carousel-item" style="background-image:url({% static 'images/slider5.jpg' %})">
@@ -48,7 +48,7 @@
 							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
 							<h3>Lorem ipsum <span class="color-primary">Lorem ipsum </span>verticals</h3>
 							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-							<a class="btn btn-lg btn-primary" href="contact-us.html">Get Started Now <i class="icon-long-arrow-right"></i></a>
+							<a class="btn btn-lg btn-primary" href="{% url 'latestreports' %}">Get Started Now <i class="icon-long-arrow-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -270,9 +270,9 @@
                                 <div class="card">
 									<div class="row">
 										<div class="col-sm-12">
-											<a href="{% url 'reports:reportpage' report.slug %}"><h4 style="color:#1ad688">{{report.title | title }}</h4></a>
+											<a href="{% url 'reports:reportpage' report.slug %}"><h4 style="color:#3153a3">{{report.title | title }}</h4></a>
                                             <p>No. of Pages: &nbsp;&nbsp;{{report.no_of_pages}} &nbsp;&nbsp;| Industry:&nbsp;&nbsp;{{report.category.name | capfirst}} </p>
-											<hr style="color:#1ad688">
+											<hr style="color:#3153a3">
 											<p>{{report.summary | truncatechars:400 | safe }}<a class="blc" href="{% url 'reports:reportpage' report.slug %}"><strong>Read More >></strong></a></p><br>
 											<div class="blog-btn">
 												 <span class="text-left"><i class="icon-calendar"></i> {{report.published_date}}</span>
