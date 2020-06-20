@@ -3,14 +3,14 @@
 {% load static %}
 <html lang="en">
 <head>
-<title>Affulence Market Reports | Industry Analysis and Research Reports</title>
+<title>Affluence Market Reports | Industry Analysis and Research Reports</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 <link rel="canonical" href="index.html"/>
-<meta name="description" content="Affulence Market Reports offers detailed business research reports with in-depth strategic insights on varied industry verticals to meet all your business need."><meta name="keywords" content="Affulence Market Reports, SMI, Research and Consulting, Business Research, Market Research reports, business consulting services, Competitive Analysis, Industry Analysis, Market Intelligence, top market research companies"><meta name="document-type" content="Public"/>
+<meta name="description" content="Affluence Market Reports offers detailed business research reports with in-depth strategic insights on varied industry verticals to meet all your business need."><meta name="keywords" content="Affluence Market Reports, SMI, Research and Consulting, Business Research, Market Research reports, business consulting services, Competitive Analysis, Industry Analysis, Market Intelligence, top market research companies"><meta name="document-type" content="Public"/>
 <meta name="Page-Topic" content="Market Research Reports"/>
-<meta name="copyright" content="Affulence Market Reports"/>
+<meta name="copyright" content="Affluence Market Reports"/>
 <meta name="classification" content="market research reports"/>
 <meta name="document-classification" content="Market Research Reports Services"/>
 <meta name="distribution" content="global"/>
@@ -33,50 +33,59 @@
 	<link href="{% static 'assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link href="{% static 'assets/css/media.css' %}" rel="stylesheet"/>
 <meta property="og:url" content="index.html"/>
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="Affulence Market Reports | Industry Analysis and Research Reports"/>
-<meta property="og:description" content="Affulence Market Reports offers detailed business research reports with in-depth strategic insights on varied industry verticals to meet all your business need."/>
+<meta property="og:title" content="Affluence Market Reports | Industry Analysis and Research Reports"/>
+<meta property="og:description" content="Affluence Market Reports offers detailed business research reports with in-depth strategic insights on varied industry verticals to meet all your business need."/>
 <meta property="og:image" content="images/logos.png"/>
 
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-149866794-1');</script>
 </head>
 <body>
 
-<div id="top-header">
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-8 text-left pad10">
+<div id="top-header" style="background-color:#6cc8de">
+<div class="container" >
+	<div class="row" >
+		<div class="col-lg-8 col-8 text-left pad10" >
 			<ul class="t-head-left">
-				<li><i class="fab fa-skype" style="color:#1ad688"></i>&nbsp;U.S:<a id="skypeno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
-				<li><i class="fas fa-phone-square-alt" style="color:#1ad688"></i>&nbsp;IND:<a id="telno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
-				<li><i class="fas fa-envelope" style="color:#1ad688"></i> <a  style="border-right:none;">&nbsp;<span class="__cf_email__">sales@affuelencemarketreports.com</span></a></li>
+				<li><i class="fab fa-skype" style="color:#3153a3"></i>&nbsp;U.S:<a id="skypeno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
+				<li><i class="fas fa-phone-square-alt" style="color:#3153a3"></i>&nbsp;IND:<a id="telno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
+				<li><i class="fas fa-envelope" style="color:#3153a3"></i> <a  style="border-right:none;">&nbsp;<span class="__cf_email__">sales@affluencemarketreports.com</span></a></li>
 			</ul>
 		</div>
-		<div class="col-lg-4 col-4 text-right">
+		<div class="col-lg-4 col-4">
 			<ul class="t-head-right">
 				<li class="nav-item">
-					<div class="input-group form-lg form-2 pl-0">
-  					<input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search..." aria-label="Search" style="height:35px">
- 						 <div class="input-group-append">
-   								 <span class="input-group-text" id="basic-text1"><i class="fas fa-search" aria-hidden="true" style="color:#1ad688"></i></span>
- 						 </div>
-					</div>
+
+                    <input id="user-input" placeholder="  Search Report..." style="height:35px;width:300px">
+					<i id="search-icon" class="fas fa-search" style="color:#3153a3"></i>
+
 				</li>
-<!--					<li class="nav-item">-->
-<!--					<a class="btn btn-primary contNBtn" href="contact-us.html"><i class="fas fa-phone-alt"></i>&nbsp; Reach Us</a>-->
-<!--				</li>-->
+
 			</ul>
 		</div>
+
+
+
 	</div>
 </div>
 </div>
-<div id="header">
+
+<div class="container" style="position: absolute;z-index: 20;">
+<div class="row">
+	<div id="replaceable-content" class="col-8 ml-auto">
+						 {% include 'base/partial-result.html' %}
+	</div>
+				</div>
+</div>
+
+
+<div id="header" >
 	<div class="container">
 		<nav class="navbar navbar-expand-lg">
-			<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/amr-logo.jpg' %}" class="smi_logo" alt="Affulence Market Reports" title="Affulence Market Reports" height="80px"></a>
+			<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/amr-logo.png' %}" class="smi_logo" alt="Affluence Market Reports" title="Affluence Market Reports" height="80px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				<span class="navbar-toggler-icon"></span>
@@ -168,23 +177,7 @@
 				</div>
 		</nav>
 	</div>
-	<div class="searchBox_sect" id="fordesktop_searchBox" style="display: none;">
-<div class="container">
-	<div class="searchBox_inner">
-		<div class="card-d">
-			<form action="#" method="get">
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<input type="text" class="form-control" placeholder="Search Your Industry Reports" name="key" onkeyup="lookup(this.value)">
-						<button type="submit" class="btn btn-primary "><i class="icon-search"></i></button>
-					</div>
-					<div class="typrch autobox"></div>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-</div>
+
 </div>
 <!--<div class="searchBox_sect" id="formob_searchBox">-->
 <!--<div class="container">-->
@@ -209,14 +202,21 @@
 
 
 {% endblock %}
+<div class="continer-fluid">
+	<div class="jumbotron text-center" style="background-color:#6cc8de">
+              <h3>Subscribe Newsletter</h3>
+		<p class="lead"><input type="text" placeholder="  Enter Your Email" style="height:40px;width:400px">&nbsp;&nbsp;<a class="btn btn-primary" href="{% url 'index' %}" role="button"><strong>Subscribe</strong></a></p>
+              <hr>
 
+            </div>
+</div>
 <div id="footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-3">
-				<a class="navbar-brand" href="index.html"><img src="{% static 'images/amr-logo.jpg' %}" style="width: 170px;" alt="Affulence Market Reports" title="Affulence Market Reports"></a>
+				<a class="navbar-brand" href="index.html"><img src="{% static 'images/amr-logo2.jpg' %}" style="width: 170px;" alt="Affluence Market Reports" title="Affluence Market Reports"></a>
 				<div class="mt-3">
-					<p>Affulence Market Reports is a management consulting organization providing market intelligence and consulting services worldwide. We bring the expertise of consultants with an cumulative industry experience of more than 70 years. <a href="about-us.html">Read More </a></p>
+					<p>Affluence Market Reports is a management consulting organization providing market intelligence and consulting services worldwide. We bring the expertise of consultants with an cumulative industry experience of more than 70 years. <a href="about-us.html">Read More </a></p>
 					<ul class="f-m-icons">
 						<li><a href="#" rel="nofollow"><img src="{% static 'images/facebook.png'%}"></a></li>
 						<li><a href="#" rel="nofollow"><img src="{% static 'images/twitter.png'%}"></a></li>
@@ -258,14 +258,14 @@
 				<h3 class="head-after">Get In Touch</h3>
 				<div class="mt-3 footer-contact">
 					<h5><i class="icon-map-marker"></i> Pune Office :</h5>
-						<b>Affulence Market Reports</b><br>
+						<b>Affluence Market Reports</b><br>
 						Old Mumbai-Pune Highway<br>
 						Wakad <br>
 						Pune <br>
 						Maharashtra <br><br>
 					<h5><i class="icon-phone"></i> <a href="">&nbsp; +1-234-567-85478</a></h5>
 
-					<h5><i class="icon-envelope"></i><a href='#'> &nbsp;<span class="__cf_email__" >sales@affuelencemarketreports.com</span></a></h5><br>
+					<h5><i class="icon-envelope"></i><a href='#'> &nbsp;<span class="__cf_email__" >sales@affluencemarketreports.com</span></a></h5><br>
 					<br>
 					<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" alt="PayPal" />
 				</div>
@@ -278,7 +278,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 text-left">
-				<p><b> &copy; 2020 Affulence Market Reports. All rights reserved</b></p>
+				<p><b> &copy; 2020 Affluence Market Reports. All rights reserved</b></p>
 			</div>
 			<div class="col-lg-6 text-right" id="ftpd">
 <!--				<p>Powered by <b>Worldwide Market Reports.</b></p>-->
@@ -311,9 +311,69 @@
 				<script src="{% static 'assets/js/bxjs.js' %}"></script>
                 <script src="{% static 'js/all.min.js' %}"></script>
 				<script src="{% static 'js/custom.js' %}"></script>
+<!--                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 <!--    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
 <!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
     <script type='text/javascript' src="{% static 'js/amr.js' %}"></script>
+
+
+<!--<script>-->
+<!--  $( function() {-->
+
+<!--    $( "#searchReport" ).autocomplete({-->
+<!--      source: '{% url 'searchreport' %}',-->
+<!--      select: function( event, ui ) {-->
+<!--      console.log('ready to send respond')-->
+<!--      console.log(ui.value)-->
+<!--      }-->
+
+<!--    });-->
+<!--  } );-->
+<!--  </script>-->
+<script>
+	const user_input = $("#user-input")
+const search_icon = $('#search-icon')
+const artists_div = $('#replaceable-content')
+const endpoint = '{% url 'searchreport' %}'
+const delay_by_in_ms = 700
+let scheduled_function = false
+
+let ajax_call = function (endpoint, request_parameters) {
+    $.getJSON(endpoint, request_parameters)
+        .done(response => {
+            // fade out the artists_div, then:
+            artists_div.fadeTo('slow', 0).promise().then(() => {
+                // replace the HTML contents
+                artists_div.html(response['html_from_view'])
+                // fade-in the div with new contents
+                artists_div.fadeTo('slow', 1)
+                // stop animating search icon
+                search_icon.removeClass('blink')
+            })
+        })
+}
+
+
+user_input.on('keyup', function () {
+
+    const request_parameters = {
+        q: $(this).val() // value of user_input: the HTML element with ID user-input
+    }
+
+    // start animating the search icon with the CSS class
+    search_icon.addClass('blink')
+
+    // if scheduled_function is NOT false, cancel the execution of the function
+    if (scheduled_function) {
+        clearTimeout(scheduled_function)
+    }
+
+    // setTimeout returns the ID of the function to be executed
+    scheduled_function = setTimeout(ajax_call, delay_by_in_ms, endpoint, request_parameters)
+})
+</script>
+
 </body>
 </html>

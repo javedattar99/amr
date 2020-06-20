@@ -1,9 +1,56 @@
 
 
 from django import forms
-from .models import Lead,Billing_Details
+from .models import Lead,Billing_Details,Contact_Us
 from django_countries.widgets import CountrySelectWidget
 
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact_Us
+        fields = ['full_name','corporate_email','phone','subject','message']
+        widgets ={
+
+            'full_name': forms.TextInput(
+                attrs={
+                    'class': 'form-control mb-2',
+                    'placeholder' : "  Full Name",
+                    'name':'fullname',
+                }
+            ),
+            'corporate_email': forms.TextInput(
+                attrs={
+                    'class': 'form-control mb-2',
+                    'placeholder': "  Corpoarate Email",
+                    'name':'email',
+                }
+            ),
+            'phone': forms.TextInput(
+                attrs={
+                    'class': 'form-control mb-2',
+                    'placeholder': "  Phone No.",
+                    'name':'phone',
+                }
+            ),
+            'subject': forms.TextInput(
+                attrs={
+                    'class': 'form-control mb-2',
+                    'placeholder': "  Subject",
+                    'name':'subject',
+                }
+            ),
+            'message': forms.Textarea(
+                attrs={
+                    'class': 'form-control mb-2',
+                    'placeholder': "  Do you have any specific field of intrest? please suggest us",
+                    'rows': '3',
+                    'cols': '40',
+                    'name':'comment',
+
+                }
+            ),
+        }
 
 class LeadForm(forms.ModelForm):
     class Meta:
@@ -19,42 +66,42 @@ class LeadForm(forms.ModelForm):
             'full_name': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder' : "Full Name",
+                    'placeholder' : "  Full Name",
                     'name':'fullname',
                 }
             ),
             'corporate_email': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Corpoarate Email",
+                    'placeholder': "  Corpoarate Email",
                     'name':'email',
                 }
             ),
             'phone': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Phone No.",
+                    'placeholder': "  Phone No.",
                     'name':'phone',
                 }
             ),
             'job_title': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Job Title",
+                    'placeholder': "  Job Title",
                     'name':'job_title',
                 }
             ),
             'company': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Company",
+                    'placeholder': "  Company",
                     'name':'company',
                 }
             ),
             'comment': forms.Textarea(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Do you have any specific field of intrest? please suggest us",
+                    'placeholder': "  Do you have any specific field of intrest? please suggest us",
                     'rows': '3',
                     'cols': '40',
                     'name':'comment',
@@ -64,7 +111,7 @@ class LeadForm(forms.ModelForm):
             'last_name': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Last Name",
+                    'placeholder': "  Last Name",
                     'name': 'lastname',
                 }
             ),
@@ -85,42 +132,42 @@ class CheckoutForm(forms.ModelForm):
             'first_name': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "First Name",
+                    'placeholder': "  First Name",
                     'name': 'First Name',
                 }
             ),
             'corporate_email': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Corpoarate Email",
+                    'placeholder': "  Corpoarate Email",
                     'name': 'email',
                 }
             ),
             'phone': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Phone No.",
+                    'placeholder': "  Phone No.",
                     'name': 'phone',
                 }
             ),
             'job_title': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Job Title",
+                    'placeholder': "  Job Title",
                     'name': 'job_title',
                 }
             ),
             'company': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Company",
+                    'placeholder': "  Company",
                     'name': 'company',
                 }
             ),
             'address': forms.Textarea(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Address",
+                    'placeholder': "  Address",
                     'rows': '3',
                     'cols': '40',
                     'name': 'address',
@@ -130,28 +177,28 @@ class CheckoutForm(forms.ModelForm):
             'city': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "City",
+                    'placeholder': "  City",
                     'name': 'city',
                 }
             ),
             'state': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "State",
+                    'placeholder': "  State",
                     'name': 'state',
                 }
             ),
             'zipcode': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Zip Code",
+                    'placeholder': "  Zip Code",
                     'name': 'zipcode',
                 }
             ),
             'last_name': forms.TextInput(
                 attrs={
                     'class': 'form-control mb-2',
-                    'placeholder': "Last Name",
+                    'placeholder': "  Last Name",
                     'name': 'lastname',
                 }
             )

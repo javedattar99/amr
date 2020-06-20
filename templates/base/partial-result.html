@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+     {% if searchreports %}
+     <table class="table table-bordered table-hover" style="background-color:#dcf5f2">
+
+			 {% for report in searchreports %}
+           <tr>
+               <td> <a href="{% url 'reports:reportpage' report.slug %}">{{ report.title }}</a></td>
+           </tr>
+			 {% endfor %}
+
+     </table>
+			{% else %}
+<!--		  <p>No Report found.</p>-->
+     {% endif %}

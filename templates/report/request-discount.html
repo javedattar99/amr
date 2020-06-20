@@ -47,10 +47,16 @@
                     <h6>Published Date: {{ report.published_date}}</h6>
                      <h6>No. of Pages: {{ report.no_of_pages}}</h6>
                     <hr>
-                     <p class="card-text"><input type="radio" name="price" checked="checked"> Single User Licence: ${{report.single_user_price}}</p>
-                      <p class="card-text"><input type="radio" name="price"> Multi User Licence: ${{report.multi_user_price}}</p>
-                    <p class="card-text"><input type="radio" name="price"> Corporate User Licence: ${{report.corporate_user_price}}</p>
-                     <a href="{% url 'reports:checkout' report.id %}" class="btn btn-primary btn-lg"><strong>Buy Now</strong></a>
+                    <form method="post" action="{% url 'reports:checkout' report.id %}">
+                          {% csrf_token %}
+                      <p class="card-text"><input type="radio" name="price" checked="checked" value="{{report.single_user_price}}"> Single User Licence:   <strong>${{report.single_user_price}}</strong></p>
+                    <hr>
+                          <p class="card-text"><input type="radio" name="price" value="{{report.multi_user_price}}"> Multi User Licence: <strong>${{report.multi_user_price}}</strong></p>
+                      <hr>
+                          <p class="card-text"><input type="radio" name="price" value="{{report.corporate_user_price}}"> Corporate User Licence: <strong>${{report.corporate_user_price}}</strong></p>
+                     <hr>
+                      <button type="submit" class="btn btn-primary btn-block"><strong><i class="fas fa-shopping-cart"></i>&nbsp;Buy Now</strong></button>
+                      </form>
                         <hr>
                     <h5 align="center">TESTIMONIALS</h5>
                     <p>The insights included in the report were valuable and easy to digest. Having these reports, impacted our business significantly. Macro as well as supply chain details were included, besides market pricing.</p>

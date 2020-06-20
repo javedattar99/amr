@@ -4,17 +4,22 @@
 
 
 from django.shortcuts import render,get_object_or_404,redirect
-from .forms import LeadForm,CheckoutForm
+from django.template.loader import render_to_string
+
+from .forms import LeadForm,CheckoutForm,ContactForm
 from .models import Category,Report,Publisher
 from django_countries import countries
 from django.core.mail import send_mail
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
+from django.http import JsonResponse
 
 
 
 def indexView(request):
     reports = Report.objects.all()[:3]
     categories = Category.objects.all()
+    query = request.GET.get('searchReport')
+    print(query)
     return render(request,'base/index.html',{'reports': reports,'categories':categories})
 
 
@@ -23,7 +28,14 @@ def aboutus(request):
 
 
 def contactus(request):
-    return render(request,'base/contact-us.html')
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('thankyou')
+    return render(request,'base/contact-us.html',{'form':form})
 
 
 def reportPage(request,slug):
@@ -162,3 +174,25 @@ def latestReports(request):
     except EmptyPage:
         reports = paginator.page(paginator.num_pages)
     return render(request,'report/latest-report.html',{'reports':reports,'all_categories':all_categories})
+
+
+def searchReports(request):
+    ctx = {}
+    url_parameter = request.GET.get("q")
+    if url_parameter:
+        searchreports = Report.objects.filter(title__icontains=url_parameter)
+    else:
+        searchreports = Report.objects.all()
+
+    ctx["searchreports"] = searchreports
+
+    if request.is_ajax():
+        html = render_to_string(
+            template_name="base/partial-result.html",
+            context={"searchreports": searchreports}
+        )
+        data_dict = {"html_from_view": html}
+        return JsonResponse(data=data_dict, safe=False)
+
+    return render(request, 'base/index.html',ctx)
+

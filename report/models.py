@@ -133,10 +133,28 @@ class Billing_Details(models.Model):
     state = models.CharField(max_length=20)
     country = CountryField(blank_label='Country')
     zipcode = models.CharField(max_length=20)
+    invoice_date = models.DateField(auto_now_add=True)
 
+
+    class Meta:
+        verbose_name_plural = 'BillingDetails'
 
     def __str__(self):
         return self.first_name + self.last_name
+
+class Contact_Us(models.Model):
+    full_name = models.CharField(max_length=50)
+    corporate_email = models.EmailField()
+    phone = models.CharField(max_length=14)
+    subject =models.CharField(max_length=500)
+    message = models.TextField()
+    contact_date = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'ContactUs'
+
+    def __str__(self):
+        return self.full_name
 
 
 

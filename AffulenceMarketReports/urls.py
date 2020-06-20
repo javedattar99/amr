@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from report.views import indexView,categoryPage,publisherPage,aboutus,contactus,latestReports,thankyouPage
+from report.views import indexView,categoryPage,publisherPage,aboutus,contactus,latestReports,thankyouPage,searchReports
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,7 @@ urlpatterns = [
     path('about-us/', aboutus, name='aboutus'),
     path('contact-us/', contactus, name='contactus'),
     path('thank-you/', thankyouPage, name='thankyou'),
+    path('search/', searchReports, name='searchreport'),
 
     path('category/<slug:slug>/', categoryPage, name='category'),
     path('publisher/<slug:slug>/', publisherPage, name='publisher'),
