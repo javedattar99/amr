@@ -23,14 +23,14 @@
 </div>
 <div class="media_box mb-2">
 <div class="media ">
-<img src="#" alt="Medical Devices industry" title="Medical Devices industry" class="align-self-start mr-4 d-none d-sm-block img-responsive">
+<img src="{% static 'images/market-report.jpg' %}" height="200px" width="170px" alt="Market Research Report" title="Market Research Report" class="align-self-start mr-4 d-none d-sm-block img-responsive">
 <div class="media-body">
   <h1 class="rd-page-title">
 	{{report.title}}	</h1>
 	<ul class="list-inline rd-cat">
 	<li class="list-inline-item"><b>Report Id</b> : {{report.id}}</li>
 	<li class="list-inline-item"><b>Pages</b> : {{report.no_of_pages}}</li>	<li class="list-inline-item"><b>Date</b> : May, 2020</li>
-	<li class="list-inline-item"><b>Category</b> : <a href="#">{{report.category.name | capfirst }}</a></li>
+	<li class="list-inline-item"><b>Category</b> : <a href="{% url 'category' report.category.slug %}">{{report.category.name | capfirst }}</a></li>
 		<li><span><b>Publisher</b> : {{report.publisher.name}}</span></li>
 	</ul>
 	<div id="calltoac">
