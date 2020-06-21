@@ -26,6 +26,8 @@ def indexView(request):
 def aboutus(request):
     return render(request,'base/about-us.html')
 
+def servicesPage(request):
+    return render(request,'base/services.html')
 
 def contactus(request):
     if request.method == 'GET':

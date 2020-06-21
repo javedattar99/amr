@@ -43,17 +43,17 @@
 </head>
 <body>
 
-<div id="top-header" style="background-color:#6cc8de">
+<div id="top-header" style="background-color:#03cafc">
 <div class="container" >
 	<div class="row" >
-		<div class="col-lg-8 col-8 text-left pad10" >
+		<div class="col-lg-8 col-md-12 text-left pad10" >
 			<ul class="t-head-left">
 				<li><i class="fab fa-skype" style="color:#3153a3"></i>&nbsp;U.S:<a id="skypeno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
 				<li><i class="fas fa-phone-square-alt" style="color:#3153a3"></i>&nbsp;IND:<a id="telno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
 				<li><i class="fas fa-envelope" style="color:#3153a3"></i> <a  style="border-right:none;">&nbsp;<span class="__cf_email__">sales@affluencemarketreports.com</span></a></li>
 			</ul>
 		</div>
-		<div class="col-lg-4 col-4">
+		<div class="col-lg-4 col-md-8 col-sm-12">
 			<ul class="t-head-right">
 				<li class="nav-item">
 
@@ -104,7 +104,7 @@
 											<div class="col-sm-6">
 												<ul class="multi-column-dropdown">
 
-													<li><a class="dropdown-item" href="{% url 'category' category.slug %}">{{category.name | title }}</a></li>
+                                                    <li><a class="dropdown-item" href="{% url 'category' category.slug %}"><strong>{{category.name | title }}</strong></a></li>
 
 
 												</ul>
@@ -115,7 +115,7 @@
 									{% for category in categories2 %}
 									<div class="col-sm-6">
 										<ul class="multi-column-dropdown">
-											<li><a class="dropdown-item" href="{% url 'category' category.slug %}">{{category.name | title }}</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'category' category.slug %}"><strong>{{category.name | title }}</strong></a></li>
 
 										</ul>
 									</div>
@@ -132,7 +132,7 @@
 									<div class="col-sm-6">
 										<ul class="multi-column-dropdown">
 
-											<li><a class="dropdown-item" href="{% url 'publisher' publisher.slug %}">{{publisher.name | title }}</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'publisher' publisher.slug %}"><strong>{{publisher.name | title }}</strong></a></li>
 
 
 										</ul>
@@ -143,7 +143,7 @@
 									{% for publisher in publishers2 %}
 									<div class="col-sm-6">
 										<ul class="multi-column-dropdown">
-											<li><a class="dropdown-item" href="{% url 'publisher' publisher.slug %}">{{publisher.name | title }}</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'publisher' publisher.slug %}"><strong>{{publisher.name | title }}</strong></a></li>
 										</ul>
 									</div>
 									{% endfor %}
@@ -156,12 +156,8 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
 								<div class="dropdown-menu animate slideIn" data-animations="fadeInDown">
-									<a class="dropdown-item" href="#">Industry Analysis Services</a>
-									<a class="dropdown-item" href="#">Business Consulting Services</a>
-									<a class="dropdown-item" href="#">Market Intelligence Services</a>
-									<a class="dropdown-item" href="service/customized-research.html">Customized Research Services</a>
-									<a class="dropdown-item" href="service/long-term-engagement-model.html">Long Term Engagement Model Services</a>
-									<a class="dropdown-item" href="service/country-specific-analysis.html">Country Specific Analysis Services</a>
+                                    <a class="dropdown-item" href="{% url 'services' %}"><strong>Services Page</strong></a>
+
 								</div>
 						</li>
 						<li class="nav-item">

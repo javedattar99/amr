@@ -2192,4 +2192,8 @@ i.fa.fa-times.srchcloseBtn{
     margin-left: -50px;
     position: absolute;
 }
+
+.card-header {
+background-color:#6cc8de;
+}
 /**note css end here**/

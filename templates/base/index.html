@@ -173,7 +173,7 @@
 <div id="our-services" class="our-services-bg">
     		<div class="container">
     			<div class="text-center mb-5">
-	    			<h3 class="head-after color-primary">Trending Reports By Industries</h3>
+					<h3 class="head-after color-primary" style="color:#3153a3"><strong>Trending Reports By Industries</strong></h3>
 
 				</div>
 				<div class="row">
@@ -186,8 +186,8 @@
 						   <div class="mb-3 text-center catimg">
 								<a href="{% url 'category' category.slug %}"><img alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"></a>
 							</div>
-							<h3 class="text-center"><a href="{% url 'category' category.slug %}">
-								 {{category.name | title }}
+							<h3 class="text-center" style="color:#3153a3"><a href="{% url 'category' category.slug %}">
+								<strong> {{category.name | title }}</strong>
 							</a></h3>
 						</div>
 					</div>
