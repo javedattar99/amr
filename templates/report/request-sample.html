@@ -18,7 +18,7 @@
     <div class="row mt-4">
         <div class="col-6">
 			<div class="card">
-					  <div class="card-header">
+					  <div class="card-header" style="background-color:#3153a3;color:white">
 						 <h5>{{report.title | title}}</h5>
 					  </div>
 					  <div class="card-body">
@@ -42,7 +42,9 @@
         <div class="col-6">
              <div class="card">
                 <div class="container">
+                    <div class="card-header" style="background-color:#3153a3;color:white;">
                     <h4 align="center">DIRECT PURCHASE</h4>
+                    </div>
                     <h6>Report Id: {{ report.id}}</h6>
                     <h6>Published Date: {{ report.published_date}}</h6>
                      <h6>No. of Pages: {{ report.no_of_pages}}</h6>
@@ -55,7 +57,7 @@
                       <hr>
                           <p class="card-text"><input type="radio" name="price" value="{{report.corporate_user_price}}"> Corporate User Licence: <strong>${{report.corporate_user_price}}</strong></p>
                      <hr>
-                      <button type="submit" class="btn btn-primary btn-block"><strong><i class="fas fa-shopping-cart"></i>&nbsp;Buy Now</strong></button>
+                      <button type="submit" class="btn btn-primary btn-block" style="background-color:#f39c12; border-color:#f39c12"><strong><i class="fas fa-shopping-cart"></i>&nbsp;Buy Now</strong></button>
                       </form>
                         <hr>
                     <h5 align="center">TESTIMONIALS</h5>
