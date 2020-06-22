@@ -41,7 +41,7 @@
 
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-149866794-1');</script>
 </head>
-<body>
+<body style="background-image: url('{% static 'images/background1.jpg' %}')">
 
 <div id="top-header" style="background-color:#03cafc">
 <div class="container" >
@@ -71,7 +71,7 @@
 </div>
 </div>
 
-<div class="container" style="position: absolute;z-index: 20;">
+<div class="container" >
 <div class="row">
 	<div id="replaceable-content" class="col-8 ml-auto">
 						 {% include 'base/partial-result.html' %}
@@ -80,7 +80,7 @@
 </div>
 
 
-<div id="header" >
+<div id="header">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg">
 			<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logoamr.png' %}" class="smi_logo" alt="Affluence Market Reports" title="Affluence Market Reports" height="80px"></a>
@@ -173,23 +173,7 @@
 	</div>
 
 </div>
-<!--<div class="searchBox_sect" id="formob_searchBox">-->
-<!--<div class="container">-->
-<!--	<div class="searchBox_inner">-->
-<!--		<div class="card-d">-->
-<!--			<form action="" method="get">-->
-<!--				<div class="input-group">-->
-<!--					<div class="input-group-prepend">-->
-<!--						<input type="text" class="form-control" placeholder="Search..." name="key" onkeyup="lookup(this.value)">-->
-<!--						<button type="submit" class="btn btn-primary "><i class="icon-search"></i></button>-->
-<!--					</div>-->
-<!--					<div class="typrch autobox"></div>-->
-<!--				</div>-->
-<!--			</form>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--</div>-->
-<!--</div>-->
+
 
 {% block body %}
 
