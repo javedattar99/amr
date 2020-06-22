@@ -7,7 +7,7 @@
 
      {% if searchreports %}
      <div class="searchdiv" style="overflow-y: scroll;position: absolute;z-index: 99;max-height: 300px;">
-     <table class="table table-bordered table-hover" style="background-color:#dcf5f2">
+     <table class="table table-bordered table-hover" style="background-color:#03cafc">
 
 			 {% for report in searchreports %}
            <tr>
@@ -23,8 +23,7 @@
 
      <script type="text/javascript">
         $(document).mouseup(function (e) {
-            if ($(e.target).closest(".searchdiv").length
-                        === 0) {
+            if ($(e.target).closest(".searchdiv").length === 0) {
                 $(".searchdiv").hide();
             }
         });

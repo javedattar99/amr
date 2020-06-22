@@ -10,7 +10,8 @@
 
 
 <style>#top-header{margin:0 0 10px 0}.header-fixed{position:fixed;width:100%;background-color:#f1f1f1;top:0;z-index:999;box-shadow:0 0 20px 0 #ddd}</style><div id="body-container">
-<div class="row">
+<div class="container">
+    <div class="row">
 <div class="col-lg-9 col-12 reportdet">
 <div class="breadcum_list">
 <nav aria-label="breadcrumb">
@@ -118,11 +119,11 @@
                   <div class="card-body">
                       <form method="post" action="{% url 'reports:checkout' report.id %}">
                           {% csrf_token %}
-                      <p class="card-text"><input type="radio" name="price" checked="checked" value="{{report.single_user_price}}"> Single User Licence:   <strong>${{report.single_user_price}}</strong></p>
+                      <p class="card-text"><input type="radio" name="price" checked="checked" value="{{report.single_user_price}}"> Single User:   <strong>${{report.single_user_price}}</strong></p>
                     <hr>
-                          <p class="card-text"><input type="radio" name="price" value="{{report.multi_user_price}}"> Multi User Licence: <strong>${{report.multi_user_price}}</strong></p>
+                          <p class="card-text"><input type="radio" name="price" value="{{report.multi_user_price}}"> Multi User: <strong>${{report.multi_user_price}}</strong></p>
                       <hr>
-                          <p class="card-text"><input type="radio" name="price" value="{{report.corporate_user_price}}"> Corporate User Licence: <strong>${{report.corporate_user_price}}</strong></p>
+                          <p class="card-text"><input type="radio" name="price" value="{{report.corporate_user_price}}"> Corporate User: <strong>${{report.corporate_user_price}}</strong></p>
                      <hr>
        <button type="submit" class="btn btn-primary btn-block" style="background-color:#f39c12; border-color:#f39c12"><i class="fas fa-shopping-cart"></i>&nbsp;<strong>Buy Now</strong></button>
                       </form>
@@ -231,136 +232,6 @@
   </div>
 </div>   
 </div>
-<!--</div><div id="testimonials" class="testimonials-bg">-->
-<!--<div class="container">-->
-<!--<div class="text-center mb-5">-->
-<!--<h1 class="head-after head-after-w">Testimonials</h1>-->
-<!--</div>-->
-<!--<div class="t-row">		-->
-<!--<div id="t-carousel" class="owl-carousel">						-->
-<!--<div class="item card">-->
-<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
-<!--	<div class="row">-->
-<!--		<div class="col-lg-3">-->
-<!--			<div class="titem-img">-->
-<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="col-lg-9 text-justify">-->
-<!--			<h5>John</h5>-->
-<!--			<p>Stratagem Market Insights was the place for someone like me who is always in search of the best market reports. The reports are well collated and have in-depth information. </p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
-<!--</div>-->
-<!--<div class="item card">-->
-<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
-<!--	<div class="row">-->
-<!--		<div class="col-lg-3">-->
-<!--			<div class="titem-img">-->
-<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/women.png" alt=""/>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="col-lg-9 text-justify">-->
-<!--			<h5>Eliyana</h5>-->
-<!--			<p>It is fantastic to find a bunch of people working hard in the background to ensure that we have a fair and clear idea of a market and be worry-free to invest in the same. </p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
-<!--</div>-->
-<!--<div class="item card">-->
-<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
-<!--	<div class="row">-->
-<!--		<div class="col-lg-3">-->
-<!--			<div class="titem-img">-->
-<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="col-lg-9 text-justify">-->
-<!--			<h5>David</h5>-->
-<!--			<p>The dedication of the team toward providing in-depth research on several markets is worth mentioning. I got 24-hr service, which is worth mentioning. This helped me in clearing my quarries. </p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
-<!--</div>-->
-<!--<div class="item card">-->
-<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
-<!--	<div class="row">-->
-<!--		<div class="col-lg-3">-->
-<!--			<div class="titem-img">-->
-<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="col-lg-9 text-justify">-->
-<!--			<h5>Nik</h5>-->
-<!--			<p>All the efforts Stratagem Market Insights put in the background helped us in an effective campaign. Our association with Stratagem Market Insights has been seamless. </p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
-<!--</div>-->
-<!--<div class="item card">-->
-<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
-<!--	<div class="row">-->
-<!--		<div class="col-lg-3">-->
-<!--			<div class="titem-img">-->
-<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/women.png" alt="women"/>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="col-lg-9 text-justify">-->
-<!--			<h5>Maria</h5>-->
-<!--			<p>I was impressed by the time-bound deliveries of report and an efficient after-sale response team that handles various quarries and complaints with ease. </p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
-<!--</div>-->
-<!--<div class="item card">-->
-<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
-<!--	<div class="row">-->
-<!--		<div class="col-lg-3">-->
-<!--			<div class="titem-img">-->
-<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="col-lg-9 text-justify">-->
-<!--			<h5>Ethan</h5>-->
-<!--			<p>We are satisfied with the quality of the content. The report was good and in depth, yet affordable and is helping us to build our strategy for the mid to long term in our businesses. </p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
-<!--</div>-->
-<!--<div class="item card">-->
-<!--	<i class="quote-icon icon-quote-left icon-2x"></i>-->
-<!--	<div class="row">-->
-<!--		<div class="col-lg-3">-->
-<!--			<div class="titem-img">-->
-<!--				<img class="w-100" src="https://www.stratagemmarketinsights.com/img1/men.png" alt=""/>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="col-lg-9 text-justify">-->
-<!--			<h5>Gari</h5>-->
-<!--			<p>Stratagem Market Insights did excellent market research for my company. This was my first experience with the firm and I was pretty pleased with their efforts. </p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<i class="quote-icon icon-quote-right icon-2x"></i>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-<!--<div id="get-services" class="get-services-bg">-->
-<!--	<div class="container">-->
-<!--		<div class="row d-flex align-items-center">-->
-<!--			<div class="col-lg-10">-->
-<!--				<h4 class="mb-2">Get In Touch</h4>-->
-<!--				<p class="mb-0">In search of customized market research solution? We are here to help you. Contact us.</p>-->
-<!--			</div>-->
-<!--			<div class="col-lg-2">-->
-<!--				<a class="btn btn-white btn-block" href="https://www.stratagemmarketinsights.com/contact-us">Contact us <i class="icon-long-arrow-right"></i></a>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--</div>-->
-
+</div>
 </div>
 {% endblock %}
