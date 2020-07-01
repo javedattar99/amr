@@ -66,11 +66,11 @@
 .time-bg:after,
 .badge-primary,
 .page-item.active .page-link{
-	background-color: #3153a3;
+	background-color: #ff0000;
 }
 /*light*/
 .btn-primary:hover{
-	background-color: #3153a3;
+	background-color: #ff0000;
 }
 /**=========================
 	END BACKGROUND
@@ -85,7 +85,7 @@
 .form-control:focus,
 .form-control:active,
 .page-item.active .page-link{
-	border-color: #3153a3;
+	border-color: #ff0000;
 }
 /**=========================
 	END BORDER

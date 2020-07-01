@@ -41,9 +41,9 @@
 
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-149866794-1');</script>
 </head>
-<body style="background-image: url('{% static 'images/background1.jpg' %}')">
+<body>
 
-<div id="top-header" style="background-color:#03cafc">
+<div id="top-header" style="background-color:#ff0000">
 <div class="container" >
 	<div class="row" >
 		<div class="col-lg-8 col-md-12 text-left pad10" >
@@ -83,7 +83,7 @@
 <div id="header">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg">
-			<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logoamr.png' %}" class="smi_logo" alt="Affluence Market Reports" title="Affluence Market Reports" height="80px"></a>
+			<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logoO.png' %}" class="smi_logo" alt="Affluence Market Reports" title="Affluence Market Reports" height="80px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				<span class="navbar-toggler-icon"></span>
@@ -269,14 +269,6 @@
 </div>
 
 
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script data-cfasync="false" src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
                 <script src="{% static 'assets/js/jquery-1.11.1.min.js' %}"></script>
 				<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
@@ -296,20 +288,6 @@
 <!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
     <script type='text/javascript' src="{% static 'js/amr.js' %}"></script>
 
-
-<!--<script>-->
-<!--  $( function() {-->
-
-<!--    $( "#searchReport" ).autocomplete({-->
-<!--      source: '{% url 'searchreport' %}',-->
-<!--      select: function( event, ui ) {-->
-<!--      console.log('ready to send respond')-->
-<!--      console.log(ui.value)-->
-<!--      }-->
-
-<!--    });-->
-<!--  } );-->
-<!--  </script>-->
 <script>
 	const user_input = $("#user-input")
 const search_icon = $('#search-icon')

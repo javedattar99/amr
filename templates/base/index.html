@@ -213,7 +213,7 @@
                                 <div class="card">
 									<div class="row">
 										<div class="col-sm-12">
-											<a href="{% url 'reports:reportpage' report.slug %}"><h4 style="color:#3153a3"><strong>{{report.title | title }}</strong></h4></a>
+											<a href="{% url 'reports:reportpage' report.slug %}"><h4 style="color:#ff0000"><strong>{{report.title | title }}</strong></h4></a>
                                             <p>No. of Pages: &nbsp;&nbsp;{{report.no_of_pages}} &nbsp;&nbsp;| Industry:&nbsp;&nbsp;{{report.category.name | capfirst}} </p>
 											<hr style="color:#3153a3">
 											<p>{{report.summary | truncatechars:400 | safe }}<a class="blc" href="{% url 'reports:reportpage' report.slug %}"><strong>Read More >></strong></a></p><br>
