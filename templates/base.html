@@ -48,17 +48,24 @@
 	<div class="row" >
 		<div class="col-lg-8 col-md-12 text-left pad10" >
 			<ul class="t-head-left">
-				<li><i class="fab fa-skype" style="color:#3153a3"></i>&nbsp;U.S:<a id="skypeno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
-				<li><i class="fas fa-phone-square-alt" style="color:#3153a3"></i>&nbsp;IND:<a id="telno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
-				<li><i class="fas fa-envelope" style="color:#3153a3"></i> <a  style="border-right:none;">&nbsp;<span class="__cf_email__">sales@affluencemarketreports.com</span></a></li>
+				<li><i class="fab fa-skype" ></i>&nbsp;U.S:<a id="skypeno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
+				<li><i class="fas fa-phone-square-alt" ></i>&nbsp;IND:<a id="telno" href="#">&nbsp;&nbsp;+1-123-456-789</a></li>
+				<li><i class="fas fa-envelope" ></i> <a  style="border-right:none;">&nbsp;<span class="__cf_email__">sales@affluencemarketreports.com</span></a></li>
 			</ul>
 		</div>
 		<div class="col-lg-4 col-md-8 col-sm-12">
 			<ul class="t-head-right">
 				<li class="nav-item">
 
-                    <input id="user-input" placeholder="  Search Report..." style="height:35px;width:300px">
-					<i id="search-icon" class="fas fa-search" style="color:#3153a3"></i>
+<!--                    <input id="user-input" placeholder="  Search Report..." style="height:35px;width:200px; border-radius: 25px;border: 2px solid #000000;">-->
+<!--					<i id="search-icon" class="fas fa-search"></i>-->
+					<div class="input-group md-form form-sm form-2 pl-0">
+					  <input id="user-input" class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search" >
+					  <div class="input-group-append">
+						<span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
+							aria-hidden="true"></i></span>
+					  </div>
+					</div>
 
 				</li>
 
@@ -83,7 +90,7 @@
 <div id="header">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg">
-			<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logoO.png' %}" class="smi_logo" alt="Affluence Market Reports" title="Affluence Market Reports" height="80px"></a>
+			<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/1.png' %}" class="smi_logo" alt="Affluence Market Reports" title="Affluence Market Reports" height="80px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				<span class="navbar-toggler-icon"></span>
@@ -170,6 +177,55 @@
 					</ul>
 				</div>
 		</nav>
+<!--		<nav class="navbar navbar-area navbar-expand-lg nav-style-01">-->
+<!--         <div class="container nav-container">-->
+<!--            <div class="collapse navbar-collapse">-->
+<!--               <div class="desktop-logo">-->
+<!--                  <a href="index.html"><img class="logo-image" src="" alt=""></a>-->
+<!--               </div>-->
+<!--               <nav role="navigation">-->
+<!--                  <a id="offcanvas-toggler" aria-label="Navigation" class="offcanvas-toggler-right d-block d-lg-none" href="#">-->
+<!--                  <i class="fa fa-bars" aria-hidden="true" title="Navigation"></i>-->
+<!--                  </a>-->
+<!--                  <ul class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block">-->
+<!--                      <li class="sp-menu-item"><a  href="index.php/about.html" >Home</a></li>-->
+<!--					  <li class="sp-menu-item sp-has-child current-item active">-->
+<!--                        <a  href="index-2.html" >Category</a>-->
+<!--                        <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 196px;">-->
+<!--                           <div class="sp-dropdown-inner">-->
+<!--                              <ul class="sp-dropdown-items">-->
+<!--                                 <li class="sp-menu-item"><a  href="#" >Healthcare</a></li>-->
+
+<!--                              </ul>-->
+<!--                           </div>-->
+<!--                        </div>-->
+<!--                     </li>-->
+<!--                      <li class="sp-menu-item sp-has-child current-item active">-->
+<!--                        <a  href="index-2.html" >Publisher</a>-->
+<!--                        <div class="sp-dropdown sp-dropdown-main sp-menu-right" style="width: 196px;">-->
+<!--                           <div class="sp-dropdown-inner">-->
+<!--                              <ul class="sp-dropdown-items">-->
+<!--                                 <li class="sp-menu-item"><a  href="#" >QY Research</a></li>-->
+
+<!--                              </ul>-->
+<!--                           </div>-->
+<!--                        </div>-->
+<!--                     </li>-->
+<!--                     <li class="sp-menu-item"><a  href="index.php/services-2.html" >Services</a></li>-->
+
+
+<!--                     <li class="sp-menu-item"><a  href="index.php/contact.html" >Contact</a>-->
+<!--                     </li>-->
+<!--                  </ul>-->
+<!--               </nav>-->
+<!--            </div>-->
+<!--            <div class="nav-right-content">-->
+<!--               <ul>-->
+<!--                  <li class="top-search"><i class="ti-search"></i></li>-->
+<!--               </ul>-->
+<!--            </div>-->
+<!--         </div>-->
+<!--      </nav>-->
 	</div>
 
 </div>
@@ -181,8 +237,8 @@
 
 {% endblock %}
 <div class="continer-fluid">
-	<div class="jumbotron text-center" style="background-color:#6cc8de">
-              <h3>Subscribe Newsletter</h3>
+	<div class="jumbotron text-center" style="background-color:#000000">
+              <h3 style="color:#ff0000">Subscribe Newsletter</h3>
 		<p class="lead"><input type="text" placeholder="  Enter Your Email" style="height:40px;width:400px">&nbsp;&nbsp;<a class="btn btn-primary" href="{% url 'index' %}" role="button"><strong>Subscribe</strong></a></p>
               <hr>
 
@@ -192,7 +248,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 mb-3">
-				<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logoamr.png' %}" class="smi_logo" alt="Affluence Market Reports" title="Affluence Market Reports" height="80px"></a>
+				<a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/1.png' %}" class="smi_logo" alt="Affluence Market Reports" title="Affluence Market Reports" height="80px"></a>
 				<div class="mt-3">
 					<p>Affluence Market Reports is a management consulting organization providing market intelligence and consulting services worldwide. We bring the expertise of consultants with an cumulative industry experience of more than 70 years. <a href="about-us.html">Read More </a></p>
 					<ul class="f-m-icons">
