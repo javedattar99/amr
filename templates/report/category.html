@@ -39,7 +39,7 @@
 											<div class="card" >
 													  <div class="card-body">
 														  <a href="{% url 'reports:reportpage' report.slug %}"><h5 class="card-title" style="color:#ff0000"><strong>{{report.title}}</strong></h5></a>
-														  <p class="card-text">{{report.summary | truncatechars:250 | safe}}<a href="{% url 'reports:reportpage' report.slug %}" style="color:blue;"><strong>Read More>></strong></a></p>
+														  <p class="card-text">{{report.summary | truncatechars:250 | safe}}<a class="blc" href="{% url 'reports:reportpage' report.slug %}" ><strong>Read More>></strong></a></p>
 														  <p class="card-text">Date: {{report.published_date}}</p>
 
 													  </div>

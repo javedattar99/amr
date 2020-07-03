@@ -18,8 +18,8 @@
     <div class="row mt-4">
         <div class="col-6">
 			<div class="card">
-					  <div class="card-header">
-						 <h5>{{report.title | title}}</h5>
+					  <div class="card-header" style="background-color:#ff0000;">
+						 <h5 style="color:white;">{{report.title | title}}</h5>
 					  </div>
 					  <div class="card-body">
 						<form method="post">
@@ -42,7 +42,10 @@
         <div class="col-6">
              <div class="card">
                 <div class="container">
-                    <h4 align="center">DIRECT PURCHASE</h4>
+                    <div class="card-header" style="background-color:#ff0000;color:white;">
+                    <h4 align="center" style="color:white;">DIRECT PURCHASE</h4>
+                    </div>
+                    <br>
                     <h6>Report Id: {{ report.id}}</h6>
                     <h6>Published Date: {{ report.published_date}}</h6>
                      <h6>No. of Pages: {{ report.no_of_pages}}</h6>

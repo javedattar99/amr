@@ -9,58 +9,97 @@
 {% block body %}
 <body>
 
-<style>#carouselExampleIndicators .carousel-item{height:700px;background-position:top}.main_carousal{max-height:550px;overflow:hidden}</style>
+<!--<style>#carouselExampleIndicators .carousel-item{height:700px;background-position:top}.main_carousal{max-height:550px;overflow:hidden}</style>-->
 <div id="main-slider">
-		<div id="carouselExampleIndicators" class="carousel slide carousel-fade main_carousal" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-				</ol>
-				<div class="carousel-inner" role="listbox">
-					<div class="carousel-item active" style="background-image:url({% static 'images/slider2.jpg' %})">
-						<div class="carousel-caption d-md-block search_mob hompge">
-							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
-							<h3>SOme text <span class="color-primary">SOme text </span>SOme text </h3>
+<!--		<div id="carouselExampleIndicators" class="carousel slide carousel-fade main_carousal" data-ride="carousel">-->
+<!--				<ol class="carousel-indicators">-->
+<!--					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>-->
+<!--					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>-->
+<!--					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
+<!--					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>-->
+<!--				</ol>-->
+<!--				<div class="carousel-inner" role="listbox">-->
+<!--					<div class="carousel-item active" style="background-image:url({% static 'images/slider2.jpg' %})">-->
+<!--						<div class="carousel-caption d-md-block search_mob hompge">-->
+<!--							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>-->
+<!--							<h3>SOme text <span class="color-primary">SOme text </span>SOme text </h3>-->
 
-							<a class="btn btn-lg btn-primary" href="{% url 'latestreports' %}">Let's Get Started<i class="icon-long-arrow-right"></i></a>
-						</div>
-					</div>
-					<div class="carousel-item" style="background-image:url({% static 'images/slider3.jpg' %})">
-						<div class="carousel-caption d-md-block search_mob hompge">
-							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
-							<h3>SOme Text <span class="color-primary">Some text</span></h3>
-							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-							<a class="btn btn-lg btn-primary " href="{% url 'latestreports' %}">Get Started Now <i class="icon-long-arrow-right"></i></a>
-						</div>
-					</div>
-					<div class="carousel-item" style="background-image:url({% static 'images/slider4.jpg' %})">
-						<div class="carousel-caption d-md-block search_mob hompge">
-							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>
-							<h3>Lorem ipsum<span class="color-primary">Trends</span> Lorem ipsum</h3>
-							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-							<a class="btn btn-lg btn-primary" href="{% url 'latestreports' %}">Get Started Now <i class="icon-long-arrow-right"></i></a>
-						</div>
-					</div>
+<!--							<a class="btn btn-lg btn-primary" href="{% url 'latestreports' %}">Let's Get Started<i class="icon-long-arrow-right"></i></a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="carousel-item" style="background-image:url({% static 'images/slider3.jpg' %})">-->
+<!--						<div class="carousel-caption d-md-block search_mob hompge">-->
+<!--							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>-->
+<!--							<h3>SOme Text <span class="color-primary">Some text</span></h3>-->
+<!--							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>-->
+<!--							<a class="btn btn-lg btn-primary " href="{% url 'latestreports' %}">Get Started Now <i class="icon-long-arrow-right"></i></a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="carousel-item" style="background-image:url({% static 'images/slider4.jpg' %})">-->
+<!--						<div class="carousel-caption d-md-block search_mob hompge">-->
+<!--							<h5 class="head-after head-after-w">Welcome to Affulence Market Reports</h5>-->
+<!--							<h3>Lorem ipsum<span class="color-primary">Trends</span> Lorem ipsum</h3>-->
+<!--							<p class="mb-4">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>-->
+<!--							<a class="btn btn-lg btn-primary" href="{% url 'latestreports' %}">Get Started Now <i class="icon-long-arrow-right"></i></a>-->
+<!--						</div>-->
+<!--					</div>-->
 
-				</div>
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
-		</div>
-
+<!--				</div>-->
+<!--				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">-->
+<!--					<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--					<span class="sr-only">Previous</span>-->
+<!--				</a>-->
+<!--				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">-->
+<!--					<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--					<span class="sr-only">Next</span>-->
+<!--				</a>-->
+<!--		</div>-->
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">Affulence Market Reports</h3>
+          <p class="lead">This is a description for the first slide.</p>
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">Affulence Market Reports</h3>
+          <p class="lead">This is a description for the second slide.</p>
+        </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/O7fzqFEfLlo/1920x1080')">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">Affulence Market Reports</h3>
+          <p class="lead">This is a description for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+</header>
 	<br>
 	<div id="our-clients" class="carousel-bg">
 	<div class="container">
-		<div class="row ourClient">
-             <div class="col-md-2 col-sm-3 text-center">
-                  <h3 class="section-title">Our Clients</h3>
+		<div class="row ourClient" >
+             <div class="col-md-2 col-sm-3 text-center" >
+                  <h3 class="section-title" style="background-color:#ff0000;">Our Clients</h3>
              </div>
                <div class="col-md-10 col-sm-9">
                 <div class="bx-wrapper" style="max-width:100%;">
@@ -119,7 +158,6 @@
 </div>
 <!--Carousel Wrapper-->
 
-<!--/.Carousel Wrapper-->
 <div id="about-us">
 	    	<div class="container">
 	    		<div class="row">
@@ -169,10 +207,12 @@
 
 
 
+
+
 <div id="our-services" class="our-services-bg">
     		<div class="container">
     			<div class="text-center mb-5">
-					<h3 class="head-after color-primary" style="color:#3153a3"><strong>Trending Reports By Industries</strong></h3>
+					<h3 class="head-after color-primary" style="color:#ff000"><strong>Trending Reports By Industries</strong></h3>
 
 				</div>
 				<div class="row">
@@ -180,15 +220,27 @@
 
 
 					{% for category in categories %}
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="">
-						   <div class="mb-3 text-center catimg">
-								<a href="{% url 'category' category.slug %}"><img alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"></a>
+					<div class="col-lg-2 col-md-6 col-sm-12">
+<!--						<div class="">-->
+<!--						   <div class="mb-3 text-center catimg">-->
+<!--								<a href="{% url 'category' category.slug %}"><img alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"></a>-->
+<!--							</div>-->
+<!--							<h3 class="text-center" style="color:#3153a3"><a href="{% url 'category' category.slug %}">-->
+<!--								<strong> {{category.name | title }}</strong>-->
+<!--							</a></h3>-->
+<!--						</div>-->
+						<!-- Card -->
+							<div class="card">
+
+							  <!-- Card image -->
+							  <div class="view overlay">
+								<a href="{% url 'category' category.slug %}"><img class="card-img-top" alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"  height="80px" width="100%">
+								</a>
+							  </div>
+
 							</div>
-							<h3 class="text-center" style="color:#3153a3"><a href="{% url 'category' category.slug %}">
-								<strong> {{category.name | title }}</strong>
-							</a></h3>
-						</div>
+<!-- Card -->                 <h3 class="text-center" ><a href="{% url 'category' category.slug %}" style="color:#ff0000;">
+						<strong> {{category.name | title }}</strong></a></h3>
 					</div>
 					{% endfor %}
                     {% else %}
@@ -197,7 +249,7 @@
 
 				</div>	
 			</div>
-    	</div>
+</div>
     	
 
 	    <div id="why-choose">
@@ -214,7 +266,7 @@
 										<div class="col-sm-12">
 											<a href="{% url 'reports:reportpage' report.slug %}"><h4 style="color:#ff0000"><strong>{{report.title | title }}</strong></h4></a>
                                             <p>No. of Pages: &nbsp;&nbsp;{{report.no_of_pages}} &nbsp;&nbsp;| Industry:&nbsp;&nbsp;{{report.category.name | capfirst}} </p>
-											<hr style="color:#3153a3">
+											<hr>
 											<p>{{report.summary | truncatechars:400 | safe }}<a class="blc" href="{% url 'reports:reportpage' report.slug %}"><strong>Read More >></strong></a></p><br>
 											<div class="blog-btn">
 												 <span class="text-left"><i class="icon-calendar"></i> {{report.published_date}}</span>

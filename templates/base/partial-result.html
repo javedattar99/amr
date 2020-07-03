@@ -7,11 +7,11 @@
 
      {% if searchreports %}
      <div class="searchdiv" style="overflow-y: scroll;position: absolute;z-index: 99;max-height: 300px;">
-     <table class="table table-bordered table-hover" style="background-color:#03cafc">
+     <table class="table table-bordered table-hover" style="background-color:#ff0000">
 
 			 {% for report in searchreports %}
            <tr>
-               <td> <a href="{% url 'reports:reportpage' report.slug %}">{{ report.title }}</a></td>
+               <td> <a href="{% url 'reports:reportpage' report.slug %}" style="color:white;">{{ report.title }}</a></td>
            </tr>
 			 {% endfor %}
 
