@@ -108,7 +108,7 @@ class Lead(models.Model):
     full_name = models.CharField(max_length=50)
     corporate_email = models.EmailField()
     country = CountryField(blank_label='Select Country')
-    phone = models.IntegerField()
+    phone = models.CharField(max_length=14)
     job_title = models.CharField(max_length=50)
     company = models.CharField(max_length=50)
     comment = models.CharField(max_length=1000,null=True,blank=True)

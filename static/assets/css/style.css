@@ -1996,7 +1996,7 @@ textarea {
 /* Dropdown columns-2 */
 
 .dropdown-menu.columns-2 {
-	min-width: 100px;
+	min-width: 80px;
 }
 .dropdown-menu li a {
 	padding: 15px 30px;

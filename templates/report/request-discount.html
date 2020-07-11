@@ -23,6 +23,7 @@
 					  </div>
 					  <div class="card-body">
 						<form method="post">
+                             <h3>*{{form.errors}}</h3>
 						{% csrf_token %}
 						{{form.full_name}}
 						{{form.corporate_email}}

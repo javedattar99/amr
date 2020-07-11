@@ -63,21 +63,21 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
+      <div class="carousel-item active" style="background-image: url('{% static 'images/slider3.jpg' %}')">
         <div class="carousel-caption d-none d-md-block">
           <h3 class="display-4">Affulence Market Reports</h3>
           <p class="lead">This is a description for the first slide.</p>
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
+      <div class="carousel-item" style="background-image: url('{% static 'images/slider5.jpg' %}')">
         <div class="carousel-caption d-none d-md-block">
           <h3 class="display-4">Affulence Market Reports</h3>
           <p class="lead">This is a description for the second slide.</p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/O7fzqFEfLlo/1920x1080')">
+      <div class="carousel-item" style="background-image: url('{% static 'images/slider3.jpg' %}')">
         <div class="carousel-caption d-none d-md-block">
           <h3 class="display-4">Affulence Market Reports</h3>
           <p class="lead">This is a description for the third slide.</p>
@@ -167,7 +167,7 @@
 							  <div class="card-body">
 								<h5 class="card-title">Card title</h5>
 								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Go somewhere</a>
+								<a href="{% url 'services' %}" class="btn btn-primary">Go somewhere</a>
 							  </div>
 						</div>
 					</div>
@@ -177,7 +177,7 @@
 							  <div class="card-body">
 								<h5 class="card-title">Card title</h5>
 								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Go somewhere</a>
+								<a href="{% url 'services' %}" class="btn btn-primary">Go somewhere</a>
 							  </div>
                          </div>
 					</div>
@@ -187,7 +187,7 @@
 							  <div class="card-body">
 								<h5 class="card-title">Card title</h5>
 								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Go somewhere</a>
+								<a href="{% url 'services' %}" class="btn btn-primary">Go somewhere</a>
 							  </div>
                          </div>
 					</div>
@@ -197,7 +197,7 @@
 							  <div class="card-body">
 								<h5 class="card-title">Card title</h5>
 								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								<a href="#" class="btn btn-primary">Go somewhere</a>
+								<a href="{% url 'services' %}" class="btn btn-primary">Go somewhere</a>
 							  </div>
                          </div>
 					</div>
@@ -212,7 +212,7 @@
 <div id="our-services" class="our-services-bg">
     		<div class="container">
     			<div class="text-center mb-5">
-					<h3 class="head-after color-primary" style="color:#ff000"><strong>Trending Reports By Industries</strong></h3>
+					<h3 class="head-after color-primary" style="color:#000000"><strong>Trending Reports By Industries</strong></h3>
 
 				</div>
 				<div class="row">
@@ -220,21 +220,16 @@
 
 
 					{% for category in categories %}
-					<div class="col-lg-2 col-md-6 col-sm-12">
-<!--						<div class="">-->
-<!--						   <div class="mb-3 text-center catimg">-->
-<!--								<a href="{% url 'category' category.slug %}"><img alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"></a>-->
-<!--							</div>-->
-<!--							<h3 class="text-center" style="color:#3153a3"><a href="{% url 'category' category.slug %}">-->
-<!--								<strong> {{category.name | title }}</strong>-->
-<!--							</a></h3>-->
-<!--						</div>-->
-						<!-- Card -->
+					<div class="col-lg-2 col-md-2 col-sm-2">
+
 							<div class="card">
 
-							  <!-- Card image -->
 							  <div class="view overlay">
-								<a href="{% url 'category' category.slug %}"><img class="card-img-top" alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"  height="80px" width="100%">
+								<a href="{% url 'category' category.slug %}">
+<!--									<img class="card-img-top" alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"  height="80px" width="100%">-->
+									<div class="card-img-top img-hover-zoom">
+                                         <img alt="{{category.name}}" title="{{category.name}}" src="{{category.image.url}}"  height="80px" width="100%">
+                                    </div>
 								</a>
 							  </div>
 

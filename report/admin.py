@@ -19,8 +19,8 @@ class ReportAdmin(ImportExportActionModelAdmin):
 
 
 class LeadAdmin(ImportExportActionModelAdmin):
-    list_display = ['id', 'report', 'full_name', 'corporate_email', 'country', 'phone', 'job_title', 'company',
-                    'comment', 'lead_date']
+    list_display = ['id', 'lead_date','report', 'full_name', 'corporate_email', 'country', 'phone', 'job_title', 'company',
+                    'comment' ]
 
 class ContactUsAdmin(ImportExportActionModelAdmin):
     list_display = ['id','full_name', 'corporate_email','phone','subject','message']

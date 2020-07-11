@@ -12,11 +12,12 @@
 		<div class="row">
 				<div class="col-lg-8">
 					<div class="card">
-					  <div class="card-header">
-						 <h3>Get in touch with us </h3>
+					  <div class="card-header" style="background-color:#ff0000;">
+						 <h3 style="color:white;">Get in touch with us </h3>
 					  </div>
 					  <div class="card-body">
 						<form method="post">
+							<h3>*{{form.errors}}</h3>
 						{% csrf_token %}
 						{{form.full_name}}
 						{{form.corporate_email}}
@@ -37,8 +38,8 @@
 		<div class="col-lg-4">
 			      <div class="card">
 
-							<div class="card-header">
-						 <h3>Get in touch with us </h3>
+							<div class="card-header" style="background-color:#ff0000;">
+						 <h3 style="color:white;">Get in touch with us </h3>
 					  </div>
 					  <div class="card-body">
 						  <p>Location Address:</p>
